@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_media_app/core/presentation/theme_manager.dart';
 
 class MyApp extends StatefulWidget {
   factory MyApp() => instance;
@@ -14,8 +15,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: getAppTheme(),
     );
   }
 }
