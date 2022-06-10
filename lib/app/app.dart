@@ -16,10 +16,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
+    debugInvertOversizedImages = true;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,
-      theme: getAppTheme(),
+      theme: getLightTheme(),
+      darkTheme: getDarkTheme(),
     );
   }
 }
