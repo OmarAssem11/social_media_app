@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_app/core/presentation/routes_manager.dart';
+import 'package:social_media_app/core/presentation/strings_manager.dart';
 import 'package:social_media_app/core/presentation/theme_manager.dart';
 
 class MyApp extends StatefulWidget {
@@ -18,6 +19,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     debugInvertOversizedImages = true;
     return MaterialApp(
+      title: AppStrings.appName,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,
       theme: getLightTheme(),
