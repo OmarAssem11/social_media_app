@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/core/presentation/color_manager.dart';
-import 'package:social_media_app/core/presentation/values_manager.dart';
+import 'package:social_media_app/core/presentation/util/color_manager.dart';
+import 'package:social_media_app/core/presentation/util/values_manager.dart';
 
 class PageIndicator extends StatefulWidget {
   const PageIndicator({required this.index});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/core/presentation/strings_manager.dart';
+import 'package:social_media_app/core/presentation/util/strings_manager.dart';
 import 'package:social_media_app/features/auth/presentation/screens/forgot_password_screen.dart';
 import 'package:social_media_app/features/auth/presentation/screens/login_screen.dart';
 import 'package:social_media_app/features/auth/presentation/screens/register_screen.dart';

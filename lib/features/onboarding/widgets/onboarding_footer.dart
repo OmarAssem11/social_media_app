@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/core/presentation/routes_manager.dart';
-import 'package:social_media_app/core/presentation/strings_manager.dart';
-import 'package:social_media_app/core/presentation/values_manager.dart';
+import 'package:social_media_app/core/presentation/util/routes_manager.dart';
+import 'package:social_media_app/core/presentation/util/strings_manager.dart';
+import 'package:social_media_app/core/presentation/util/values_manager.dart';
 import 'package:social_media_app/features/onboarding/widgets/page_indicator.dart';
 
 class OnboardingFooter extends StatefulWidget {

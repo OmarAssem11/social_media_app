@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/core/presentation/color_manager.dart';
-import 'package:social_media_app/core/presentation/font_manager.dart';
-import 'package:social_media_app/core/presentation/styles_manager.dart';
-import 'package:social_media_app/core/presentation/values_manager.dart';
+import 'package:social_media_app/core/presentation/util/color_manager.dart';
+import 'package:social_media_app/core/presentation/util/font_manager.dart';
+import 'package:social_media_app/core/presentation/util/styles_manager.dart';
+import 'package:social_media_app/core/presentation/util/values_manager.dart';
 
 //Light theme
 ThemeData getLightTheme() => ThemeData(
