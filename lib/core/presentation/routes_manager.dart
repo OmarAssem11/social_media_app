@@ -4,9 +4,11 @@ import 'package:social_media_app/features/auth/presentation/screens/forgot_passw
 import 'package:social_media_app/features/auth/presentation/screens/login_screen.dart';
 import 'package:social_media_app/features/auth/presentation/screens/register_screen.dart';
 import 'package:social_media_app/features/auth/presentation/screens/starter_screen.dart';
+import 'package:social_media_app/features/onboarding/presentation/onboarding_screen.dart';
 
 class AppRoutes {
   static const starter = '/';
+  static const onboarding = '/onboarding';
   static const login = '/login';
   static const register = '/register';
   static const forgotPassword = '/forgotPassword';
@@ -17,6 +19,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case AppRoutes.starter:
       return MaterialPageRoute(
         builder: (_) => const StarterScreen(),
+      );
+    case AppRoutes.onboarding:
+      return MaterialPageRoute(
+        builder: (_) => const OnboardingScreen(),
       );
     case AppRoutes.login:
       return MaterialPageRoute(

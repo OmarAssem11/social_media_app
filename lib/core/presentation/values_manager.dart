@@ -1,19 +1,10 @@
-class AppMargin {
-  static const m8 = 8.0;
-  static const m12 = 12.0;
-  static const m14 = 14.0;
-  static const m16 = 16.0;
-  static const m18 = 18.0;
-  static const m20 = 20.0;
-}
-
-class AppPadding {
-  static const p8 = 8.0;
-  static const p12 = 12.0;
-  static const p14 = 14.0;
-  static const p16 = 16.0;
-  static const p18 = 18.0;
-  static const p20 = 20.0;
+class Insets {
+  static const i8 = 8.0;
+  static const i12 = 12.0;
+  static const i14 = 14.0;
+  static const i16 = 16.0;
+  static const i18 = 18.0;
+  static const i20 = 20.0;
 }
 
 class AppSize {

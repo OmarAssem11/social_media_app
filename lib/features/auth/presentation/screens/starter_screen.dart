@@ -6,7 +6,7 @@ class StarterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Navigator.of(context).pushReplacementNamed(AppRoutes.login);
+    Navigator.of(context).pushReplacementNamed(AppRoutes.onboarding);
     return const Scaffold();
   }
 }

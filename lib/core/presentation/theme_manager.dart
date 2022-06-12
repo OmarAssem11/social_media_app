@@ -62,7 +62,7 @@ ThemeData getLightTheme() => ThemeData(
       ),
       //InputDecoration
       inputDecorationTheme: InputDecorationTheme(
-        contentPadding: const EdgeInsets.all(AppPadding.p8),
+        contentPadding: const EdgeInsets.all(Insets.i8),
         hintStyle: getRegularTextStyle(
           color: ColorManager.grey,
           fontSize: FontSizeManager.s14,
@@ -172,7 +172,7 @@ ThemeData getDarkTheme() => ThemeData(
       ),
       //InputDecoration
       inputDecorationTheme: InputDecorationTheme(
-        contentPadding: const EdgeInsets.all(AppPadding.p8),
+        contentPadding: const EdgeInsets.all(Insets.i8),
         hintStyle: getRegularTextStyle(
           color: ColorManager.grey,
           fontSize: FontSizeManager.s14,
