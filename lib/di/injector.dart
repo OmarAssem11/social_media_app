@@ -5,4 +5,4 @@ import 'package:social_media_app/di/injector.config.dart';
 final getIt = GetIt.instance;
 
 @InjectableInit()
-Future<void> configureDependencies() async => $initGetIt(getIt);
+Future<void> configureDependencies() => $initGetIt(getIt);
