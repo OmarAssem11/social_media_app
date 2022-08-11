@@ -8,13 +8,13 @@ import 'package:social_media_app/features/auth/domain/repositories/auth_reposito
 
 @lazySingleton
 class RegisterUseCase implements UseCase<Unit, RegisterParams> {
-  final IAuthRepository _authRepository;
+  final AuthRepository _authRepository;
 
   const RegisterUseCase(this._authRepository);
 
   @override
   Future<Either<Failure, Unit>> call(RegisterParams params) =>
-      throw UnimplementedError();
+      _authRepository.register(registerEntity: params.registerEntity);
 }
 
 class RegisterParams extends AppParams {
