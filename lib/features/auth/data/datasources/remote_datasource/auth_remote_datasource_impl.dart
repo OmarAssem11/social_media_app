@@ -14,7 +14,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<UserModel> register({required RegisterModel registerModel}) async {
     try {
-      await _authFirebaseService.register();
+      await _authFirebaseService.register(registerModel);
       return _authFirebaseService.register(registerModel);
     } catch (exception) {
       throw returnRemoteAppException(exception);
