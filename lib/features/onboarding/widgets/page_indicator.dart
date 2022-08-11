@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/core/presentation/util/color_manager.dart';
-import 'package:social_media_app/core/presentation/util/values_manager.dart';
+import 'package:social_media_app/core/presentation/resources/color_manager.dart';
+import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 
 class PageIndicator extends StatefulWidget {
   const PageIndicator({required this.index});
@@ -17,8 +17,8 @@ class _PageIndicatorState extends State<PageIndicator> {
     return Row(
       children: [
         Container(
-          height: AppSize.s12,
-          width: AppSize.s12,
+          height: Sizes.s12,
+          width: Sizes.s12,
           decoration: BoxDecoration(
             color: widget.index == 1
                 ? ColorManager.primary
@@ -26,10 +26,10 @@ class _PageIndicatorState extends State<PageIndicator> {
             shape: BoxShape.circle,
           ),
         ),
-        const SizedBox(width: AppSize.s8),
+        const SizedBox(width: Sizes.s8),
         Container(
-          height: AppSize.s12,
-          width: AppSize.s12,
+          height: Sizes.s12,
+          width: Sizes.s12,
           decoration: BoxDecoration(
             color: widget.index == 2
                 ? ColorManager.primary
@@ -37,10 +37,10 @@ class _PageIndicatorState extends State<PageIndicator> {
             shape: BoxShape.circle,
           ),
         ),
-        const SizedBox(width: AppSize.s8),
+        const SizedBox(width: Sizes.s8),
         Container(
-          height: AppSize.s12,
-          width: AppSize.s12,
+          height: Sizes.s12,
+          width: Sizes.s12,
           decoration: BoxDecoration(
             color: widget.index == 3
                 ? ColorManager.primary

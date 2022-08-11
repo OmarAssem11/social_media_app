@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/core/presentation/util/routes_manager.dart';
+import 'package:social_media_app/core/presentation/resources/routes_manager.dart';
 
 class StarterScreen extends StatelessWidget {
   const StarterScreen();

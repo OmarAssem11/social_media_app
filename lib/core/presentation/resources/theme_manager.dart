@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/core/presentation/util/color_manager.dart';
-import 'package:social_media_app/core/presentation/util/font_manager.dart';
-import 'package:social_media_app/core/presentation/util/styles_manager.dart';
-import 'package:social_media_app/core/presentation/util/values_manager.dart';
+import 'package:social_media_app/core/presentation/resources/color_manager.dart';
+import 'package:social_media_app/core/presentation/resources/font_manager.dart';
+import 'package:social_media_app/core/presentation/resources/styles_manager.dart';
+import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 
 //Light theme
 ThemeData getLightTheme() => ThemeData(
@@ -11,13 +11,13 @@ ThemeData getLightTheme() => ThemeData(
       cardTheme: const CardTheme(
         color: ColorManager.white,
         shadowColor: ColorManager.grey,
-        elevation: AppSize.s4,
+        elevation: Sizes.s4,
       ),
       //AppBar
       appBarTheme: AppBarTheme(
         centerTitle: true,
         color: ColorManager.primary,
-        elevation: AppSize.s4,
+        elevation: Sizes.s4,
         titleTextStyle: getRegularTextStyle(
           fontSize: FontSizeManager.s16,
           color: ColorManager.white,
@@ -38,7 +38,7 @@ ThemeData getLightTheme() => ThemeData(
           ),
           primary: ColorManager.primary,
           shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(AppSize.s12)),
+            borderRadius: BorderRadius.all(Radius.circular(Sizes.s12)),
           ),
         ),
       ),
@@ -62,7 +62,7 @@ ThemeData getLightTheme() => ThemeData(
       ),
       //InputDecoration
       inputDecorationTheme: InputDecorationTheme(
-        contentPadding: const EdgeInsets.all(Insets.i8),
+        contentPadding: const EdgeInsets.all(Insets.xs),
         hintStyle: getRegularTextStyle(
           color: ColorManager.grey,
           fontSize: FontSizeManager.s14,
@@ -78,37 +78,37 @@ ThemeData getLightTheme() => ThemeData(
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: ColorManager.primary,
-            width: AppSize.s1_5,
+            width: Sizes.s1_5,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(AppSize.s8),
+            Radius.circular(Sizes.s8),
           ),
         ),
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: ColorManager.grey,
-            width: AppSize.s1_5,
+            width: Sizes.s1_5,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(AppSize.s8),
+            Radius.circular(Sizes.s8),
           ),
         ),
         errorBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: ColorManager.error,
-            width: AppSize.s1_5,
+            width: Sizes.s1_5,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(AppSize.s8),
+            Radius.circular(Sizes.s8),
           ),
         ),
         focusedErrorBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: ColorManager.primary,
-            width: AppSize.s1_5,
+            width: Sizes.s1_5,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(AppSize.s8),
+            Radius.circular(Sizes.s8),
           ),
         ),
       ),
@@ -121,13 +121,13 @@ ThemeData getDarkTheme() => ThemeData(
       cardTheme: const CardTheme(
         color: ColorManager.white,
         shadowColor: ColorManager.grey,
-        elevation: AppSize.s4,
+        elevation: Sizes.s4,
       ),
       //AppBar
       appBarTheme: AppBarTheme(
         centerTitle: true,
         color: ColorManager.primary,
-        elevation: AppSize.s4,
+        elevation: Sizes.s4,
         titleTextStyle: getRegularTextStyle(
           fontSize: FontSizeManager.s16,
           color: ColorManager.white,
@@ -148,7 +148,7 @@ ThemeData getDarkTheme() => ThemeData(
           ),
           primary: ColorManager.primary,
           shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(AppSize.s12)),
+            borderRadius: BorderRadius.all(Radius.circular(Sizes.s12)),
           ),
         ),
       ),
@@ -172,7 +172,7 @@ ThemeData getDarkTheme() => ThemeData(
       ),
       //InputDecoration
       inputDecorationTheme: InputDecorationTheme(
-        contentPadding: const EdgeInsets.all(Insets.i8),
+        contentPadding: const EdgeInsets.all(Insets.xs),
         hintStyle: getRegularTextStyle(
           color: ColorManager.grey,
           fontSize: FontSizeManager.s14,
@@ -188,37 +188,37 @@ ThemeData getDarkTheme() => ThemeData(
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: ColorManager.primary,
-            width: AppSize.s1_5,
+            width: Sizes.s1_5,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(AppSize.s8),
+            Radius.circular(Sizes.s8),
           ),
         ),
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: ColorManager.grey,
-            width: AppSize.s1_5,
+            width: Sizes.s1_5,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(AppSize.s8),
+            Radius.circular(Sizes.s8),
           ),
         ),
         errorBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: ColorManager.error,
-            width: AppSize.s1_5,
+            width: Sizes.s1_5,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(AppSize.s8),
+            Radius.circular(Sizes.s8),
           ),
         ),
         focusedErrorBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: ColorManager.primary,
-            width: AppSize.s1_5,
+            width: Sizes.s1_5,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(AppSize.s8),
+            Radius.circular(Sizes.s8),
           ),
         ),
       ),
