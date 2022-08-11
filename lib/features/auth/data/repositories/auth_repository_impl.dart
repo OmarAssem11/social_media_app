@@ -22,9 +22,10 @@ class AuthRepositoryImpl implements AuthRepository {
     required RegisterEntity registerEntity,
   }) async {
     try {
-      await _authRemoteDataSource.register(
+      final userModel = await _authRemoteDataSource.register(
         registerModel: registerEntity.toModel,
       );
+      _authLocalDataSource.saveUser(userModel);
       return right(unit);
     } catch (exception) {
       return left(Failure());

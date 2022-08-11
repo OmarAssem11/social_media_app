@@ -8,9 +8,11 @@ environment:
 
 dependencies:
   cached_network_image: ^3.2.1
+  cloud_firestore: ^3.4.4
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
   equatable: ^2.0.3
+  firebase_auth: ^3.6.3
   firebase_core: ^1.17.1
   flutter:
     sdk: flutter 

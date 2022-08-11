@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:social_media_app/core/data/models/user_model.dart';
 import 'package:social_media_app/core/presentation/util/strings_manager.dart';
 import 'package:social_media_app/features/auth/domain/datasources/local_datasource.dart/auth_local_datasource.dart';
 
@@ -10,18 +13,18 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
   const AuthLocalDataSourceImpl(this._sharedPreferences);
 
   @override
-  Future<bool> saveToken(String token) => _sharedPreferences.setString(
-        AppStrings.tokenKey,
-        token,
+  Future<bool> saveUser(UserModel userModel) => _sharedPreferences.setString(
+        AppStrings.userKey,
+        jsonEncode(userModel.toJson()),
       );
 
   @override
-  String? getToken() => _sharedPreferences.getString(
-        AppStrings.tokenKey,
+  String? getUser() => _sharedPreferences.getString(
+        AppStrings.userKey,
       );
 
   @override
-  Future<bool> deleteToken() => _sharedPreferences.remove(
-        AppStrings.tokenKey,
+  Future<bool> deleteUser() => _sharedPreferences.remove(
+        AppStrings.userKey,
       );
 }

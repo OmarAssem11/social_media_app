@@ -1,7 +1,9 @@
+import 'package:social_media_app/core/data/models/user_model.dart';
+
 abstract class AuthLocalDataSource {
-  Future<bool> saveToken(String token);
+  Future<bool> saveUser(UserModel userModel);
 
-  String? getToken();
+  String? getUser();
 
-  Future<bool> deleteToken();
+  Future<bool> deleteUser();
 }
