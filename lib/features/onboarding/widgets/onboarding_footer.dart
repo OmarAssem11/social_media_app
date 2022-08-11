@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/core/presentation/util/routes_manager.dart';
-import 'package:social_media_app/core/presentation/util/strings_manager.dart';
-import 'package:social_media_app/core/presentation/util/values_manager.dart';
+import 'package:social_media_app/core/presentation/resources/routes_manager.dart';
+import 'package:social_media_app/core/presentation/resources/strings_manager.dart';
+import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 import 'package:social_media_app/features/onboarding/widgets/page_indicator.dart';
 
 class OnboardingFooter extends StatefulWidget {
@@ -25,7 +25,7 @@ class _OnboardingFooterState extends State<OnboardingFooter> {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.1,
-      padding: const EdgeInsets.all(Insets.i20),
+      padding: const EdgeInsets.all(Insets.l),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
