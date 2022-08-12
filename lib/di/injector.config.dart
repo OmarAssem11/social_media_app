@@ -19,8 +19,9 @@ import '../features/auth/domain/datasources/auth_remote_datasource.dart'
     as _i10;
 import '../features/auth/domain/repositories/auth_repository.dart' as _i8;
 import '../features/auth/domain/usecases/login_use_case.dart' as _i11;
-import '../features/auth/domain/usecases/register_use_case.dart' as _i12;
-import 'app_module.dart' as _i13; // ignore_for_file: unnecessary_lambdas
+import '../features/auth/domain/usecases/logout_use_case.dart' as _i12;
+import '../features/auth/domain/usecases/register_use_case.dart' as _i13;
+import 'app_module.dart' as _i14; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -39,9 +40,11 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
       get<_i6.AuthLocalDataSource>(), get<_i10.AuthRemoteDataSource>()));
   gh.lazySingleton<_i11.LoginUseCase>(
       () => _i11.LoginUseCase(get<_i8.AuthRepository>()));
-  gh.lazySingleton<_i12.RegisterUseCase>(
-      () => _i12.RegisterUseCase(get<_i8.AuthRepository>()));
+  gh.lazySingleton<_i12.LogoutUseCase>(
+      () => _i12.LogoutUseCase(get<_i8.AuthRepository>()));
+  gh.lazySingleton<_i13.RegisterUseCase>(
+      () => _i13.RegisterUseCase(get<_i8.AuthRepository>()));
   return get;
 }
 
-class _$AppModule extends _i13.AppModule {}
+class _$AppModule extends _i14.AppModule {}

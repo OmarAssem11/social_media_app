@@ -41,4 +41,6 @@ class AuthFirebaseService {
     final userModel = UserModel.fromJson(documentSnapShot.data()!);
     return userModel;
   }
+
+  Future<void> logout() => FirebaseAuth.instance.signOut();
 }

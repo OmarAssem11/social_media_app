@@ -6,4 +6,6 @@ abstract class AuthRemoteDataSource {
   Future<UserModel> register(RegisterModel registerModel);
 
   Future<UserModel> login(LoginModel loginModel);
+
+  Future<void> logout();
 }

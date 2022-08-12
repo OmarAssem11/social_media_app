@@ -26,7 +26,7 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final userModel =
           await _authRemoteDataSource.register(registerEntity.toModel);
-      _authLocalDataSource.saveUser(userModel);
+      await _authLocalDataSource.saveUser(userModel);
       return right(unit);
     } on AppException catch (appException) {
       return left(returnFailure(appException));
@@ -37,7 +37,18 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<Either<Failure, Unit>> login(LoginEntity loginEntity) async {
     try {
       final userModel = await _authRemoteDataSource.login(loginEntity.toModel);
-      _authLocalDataSource.saveUser(userModel);
+      await _authLocalDataSource.saveUser(userModel);
+      return right(unit);
+    } on AppException catch (appException) {
+      return left(returnFailure(appException));
+    }
+  }
+
+  @override
+  Future<Either<Failure, Unit>> logout() async {
+    try {
+      await _authRemoteDataSource.logout();
+      await _authLocalDataSource.deleteUser();
       return right(unit);
     } on AppException catch (appException) {
       return left(returnFailure(appException));
