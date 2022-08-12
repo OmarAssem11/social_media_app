@@ -50,16 +50,6 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Hashtag`
-  String get appName {
-    return Intl.message(
-      'Hashtag',
-      name: 'appName',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `No page found!`
   String get noPageFound {
     return Intl.message(

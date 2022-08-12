@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/domain/params/no_params.dart';
 import 'package:social_media_app/features/auth/domain/entities/login_entity.dart';
 import 'package:social_media_app/features/auth/domain/entities/register_entity.dart';
@@ -9,6 +10,7 @@ import 'package:social_media_app/features/auth/domain/usecases/logout_use_case.d
 import 'package:social_media_app/features/auth/domain/usecases/register_use_case.dart';
 import 'package:social_media_app/features/auth/presentation/cubit/auth_state.dart';
 
+@injectable
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit(
     this._registerUseCase,
