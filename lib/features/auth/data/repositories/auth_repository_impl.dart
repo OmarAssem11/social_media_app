@@ -5,8 +5,8 @@ import 'package:social_media_app/core/domain/failure/failure.dart';
 import 'package:social_media_app/core/domain/failure/return_failure.dart';
 import 'package:social_media_app/features/auth/data/mappers/login_mappers/login_entity_mapper.dart';
 import 'package:social_media_app/features/auth/data/mappers/register_mappers/register_entity_mapper.dart';
-import 'package:social_media_app/features/auth/domain/datasources/local_datasource.dart/auth_local_datasource.dart';
-import 'package:social_media_app/features/auth/domain/datasources/remote_datasource/auth_remote_datasource.dart';
+import 'package:social_media_app/features/auth/domain/datasources/auth_local_datasource.dart';
+import 'package:social_media_app/features/auth/domain/datasources/auth_remote_datasource.dart';
 import 'package:social_media_app/features/auth/domain/entities/login_entity.dart';
 import 'package:social_media_app/features/auth/domain/entities/register_entity.dart';
 import 'package:social_media_app/features/auth/domain/repositories/auth_repository.dart';
@@ -22,9 +22,7 @@ class AuthRepositoryImpl implements AuthRepository {
   );
 
   @override
-  Future<Either<Failure, Unit>> register({
-    required RegisterEntity registerEntity,
-  }) async {
+  Future<Either<Failure, Unit>> register(RegisterEntity registerEntity) async {
     try {
       final userModel =
           await _authRemoteDataSource.register(registerEntity.toModel);

@@ -8,15 +8,14 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:shared_preferences/shared_preferences.dart' as _i5;
 
-import '../features/auth/data/datasources/local_datasource/auth_local_datasource_impl.dart'
+import '../features/auth/data/datasources/auth_local_datasource_impl.dart'
     as _i7;
-import '../features/auth/data/datasources/remote_datasource/auth_remote_datasource_impl.dart'
+import '../features/auth/data/datasources/auth_remote_datasource_impl.dart'
     as _i3;
 import '../features/auth/data/repositories/auth_repository_impl.dart' as _i9;
 import '../features/auth/data/services/auth_firebase_service.dart' as _i4;
-import '../features/auth/domain/datasources/local_datasource.dart/auth_local_datasource.dart'
-    as _i6;
-import '../features/auth/domain/datasources/remote_datasource/auth_remote_datasource.dart'
+import '../features/auth/domain/datasources/auth_local_datasource.dart' as _i6;
+import '../features/auth/domain/datasources/auth_remote_datasource.dart'
     as _i10;
 import '../features/auth/domain/repositories/auth_repository.dart' as _i8;
 import '../features/auth/domain/usecases/login_use_case.dart' as _i11;
