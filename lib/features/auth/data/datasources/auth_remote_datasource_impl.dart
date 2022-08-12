@@ -41,6 +41,15 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   }
 
   @override
+  Future<void> forgotPassword(String email) {
+    try {
+      return _authFirebaseService.forgotPassword(email);
+    } catch (exception) {
+      throw returnRemoteAppException(exception);
+    }
+  }
+
+  @override
   User? getCurrentUser() {
     try {
       return _authFirebaseService.getCurrentUser();
