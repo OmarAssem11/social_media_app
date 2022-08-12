@@ -18,10 +18,11 @@ import '../features/auth/domain/datasources/auth_local_datasource.dart' as _i6;
 import '../features/auth/domain/datasources/auth_remote_datasource.dart'
     as _i10;
 import '../features/auth/domain/repositories/auth_repository.dart' as _i8;
-import '../features/auth/domain/usecases/login_use_case.dart' as _i11;
-import '../features/auth/domain/usecases/logout_use_case.dart' as _i12;
-import '../features/auth/domain/usecases/register_use_case.dart' as _i13;
-import 'app_module.dart' as _i14; // ignore_for_file: unnecessary_lambdas
+import '../features/auth/domain/usecases/is_logged_in_use_case.dart' as _i11;
+import '../features/auth/domain/usecases/login_use_case.dart' as _i12;
+import '../features/auth/domain/usecases/logout_use_case.dart' as _i13;
+import '../features/auth/domain/usecases/register_use_case.dart' as _i14;
+import 'app_module.dart' as _i15; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -38,13 +39,15 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
       () => _i7.AuthLocalDataSourceImpl(get<_i5.SharedPreferences>()));
   gh.lazySingleton<_i8.AuthRepository>(() => _i9.AuthRepositoryImpl(
       get<_i6.AuthLocalDataSource>(), get<_i10.AuthRemoteDataSource>()));
-  gh.lazySingleton<_i11.LoginUseCase>(
-      () => _i11.LoginUseCase(get<_i8.AuthRepository>()));
-  gh.lazySingleton<_i12.LogoutUseCase>(
-      () => _i12.LogoutUseCase(get<_i8.AuthRepository>()));
-  gh.lazySingleton<_i13.RegisterUseCase>(
-      () => _i13.RegisterUseCase(get<_i8.AuthRepository>()));
+  gh.lazySingleton<_i11.IsLoggedInUseCase>(
+      () => _i11.IsLoggedInUseCase(get<_i8.AuthRepository>()));
+  gh.lazySingleton<_i12.LoginUseCase>(
+      () => _i12.LoginUseCase(get<_i8.AuthRepository>()));
+  gh.lazySingleton<_i13.LogoutUseCase>(
+      () => _i13.LogoutUseCase(get<_i8.AuthRepository>()));
+  gh.lazySingleton<_i14.RegisterUseCase>(
+      () => _i14.RegisterUseCase(get<_i8.AuthRepository>()));
   return get;
 }
 
-class _$AppModule extends _i14.AppModule {}
+class _$AppModule extends _i15.AppModule {}
