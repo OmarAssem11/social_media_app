@@ -1,0 +1,14 @@
+{
+    "appName": "هاشتاج",
+    "noPageFound": "!لا يوجد صفحة",
+    "somethingWentWrong": "!حدث خطأ",
+    "next": "التالي",
+    "skip": "السابق",
+    "register": "إنشاء حساب",
+    "login": "نسجيل دخول",
+    "emailAddress": "البريد الإكتروني",
+    "password": "كلمة السر",
+    "firstName": "الأسم الأول",
+    "lastName": "أسم العائلة",
+    "alreadyHaveAnAccount": "لديك حساب؟"
+}

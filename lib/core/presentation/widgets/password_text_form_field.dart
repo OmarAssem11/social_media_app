@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 import 'package:social_media_app/core/presentation/validation/validators.dart';
+import 'package:social_media_app/generated/l10n.dart';
 
 class PasswordTextFormField extends StatefulWidget {
   const PasswordTextFormField({required this.controller});
@@ -26,7 +27,7 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
       padding: const EdgeInsets.only(top: Sizes.s12),
       child: TextFormField(
         decoration: InputDecoration(
-          hintText: 'password',
+          hintText: S.current.password,
           prefixIcon: const Icon(Icons.lock_outline),
           suffixIcon: IconButton(
             icon: Icon(
