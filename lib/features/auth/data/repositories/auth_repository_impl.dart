@@ -54,4 +54,19 @@ class AuthRepositoryImpl implements AuthRepository {
       return left(returnFailure(appException));
     }
   }
+
+  @override
+  Future<Either<Failure, bool>> isLoggedIn() async {
+    try {
+      final firebaseUser = _authRemoteDataSource.getCurrentUser();
+      final prefUser = _authLocalDataSource.getUser();
+      if (firebaseUser != null && prefUser != null) {
+        return right(true);
+      } else {
+        return right(false);
+      }
+    } on AppException catch (appException) {
+      return left(returnFailure(appException));
+    }
+  }
 }
