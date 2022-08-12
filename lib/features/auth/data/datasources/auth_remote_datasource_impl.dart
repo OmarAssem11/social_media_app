@@ -4,7 +4,7 @@ import 'package:social_media_app/core/data/models/user_model.dart';
 import 'package:social_media_app/features/auth/data/models/login_model/login_model.dart';
 import 'package:social_media_app/features/auth/data/models/register_model/register_model.dart';
 import 'package:social_media_app/features/auth/data/services/auth_firebase_service.dart';
-import 'package:social_media_app/features/auth/domain/datasources/remote_datasource/auth_remote_datasource.dart';
+import 'package:social_media_app/features/auth/domain/datasources/auth_remote_datasource.dart';
 
 @lazySingleton
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {

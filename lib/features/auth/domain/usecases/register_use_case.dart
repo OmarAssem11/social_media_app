@@ -14,7 +14,7 @@ class RegisterUseCase implements UseCase<Unit, RegisterParams> {
 
   @override
   Future<Either<Failure, Unit>> call(RegisterParams params) =>
-      _authRepository.register(registerEntity: params.registerEntity);
+      _authRepository.register(params.registerEntity);
 }
 
 class RegisterParams extends AppParams {
@@ -23,5 +23,5 @@ class RegisterParams extends AppParams {
   RegisterParams(this.registerEntity);
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [registerEntity];
 }
