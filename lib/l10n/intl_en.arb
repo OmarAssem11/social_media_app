@@ -1,0 +1,14 @@
+{
+    "appName": "Hashtag",
+    "noPageFound": "No page found!",
+    "somethingWentWrong": "Something went wrong!",
+    "next": "Next",
+    "skip": "Skip",
+    "register": "Register",
+    "login": "Login",
+    "emailAddress": "Email address",
+    "password": "Password",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "alreadyHaveAnAccount": "Already have an account?"
+}
