@@ -15,7 +15,6 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<UserModel> register(RegisterModel registerModel) async {
     try {
-      await _authFirebaseService.register(registerModel);
       return _authFirebaseService.register(registerModel);
     } catch (exception) {
       throw returnRemoteAppException(exception);
@@ -25,8 +24,16 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<UserModel> login(LoginModel loginModel) async {
     try {
-      await _authFirebaseService.login(loginModel);
       return _authFirebaseService.login(loginModel);
+    } catch (exception) {
+      throw returnRemoteAppException(exception);
+    }
+  }
+
+  @override
+  Future<void> logout() async {
+    try {
+      return _authFirebaseService.logout();
     } catch (exception) {
       throw returnRemoteAppException(exception);
     }
