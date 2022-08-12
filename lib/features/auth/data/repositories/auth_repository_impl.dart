@@ -1,8 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/exceptions/app_exception.dart';
-import 'package:social_media_app/core/data/mappers/user_model_mapper.dart';
-import 'package:social_media_app/core/domain/entities/user.dart';
 import 'package:social_media_app/core/domain/failure/failure.dart';
 import 'package:social_media_app/core/domain/failure/return_failure.dart';
 import 'package:social_media_app/features/auth/data/mappers/login_mappers/login_entity_mapper.dart';
@@ -38,11 +36,11 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<Either<Failure, User>> login(LoginEntity loginEntity) async {
+  Future<Either<Failure, Unit>> login(LoginEntity loginEntity) async {
     try {
       final userModel = await _authRemoteDataSource.login(loginEntity.toModel);
       _authLocalDataSource.saveUser(userModel);
-      return right(userModel.fromModel);
+      return right(unit);
     } on AppException catch (appException) {
       return left(returnFailure(appException));
     }
