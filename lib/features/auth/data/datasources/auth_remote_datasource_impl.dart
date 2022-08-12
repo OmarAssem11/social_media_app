@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/exceptions/return_app_exception.dart';
 import 'package:social_media_app/core/data/models/user_model.dart';
@@ -34,6 +35,15 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   Future<void> logout() async {
     try {
       return _authFirebaseService.logout();
+    } catch (exception) {
+      throw returnRemoteAppException(exception);
+    }
+  }
+
+  @override
+  User? getCurrentUser() {
+    try {
+      return _authFirebaseService.getCurrentUser();
     } catch (exception) {
       throw returnRemoteAppException(exception);
     }

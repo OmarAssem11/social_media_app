@@ -43,4 +43,6 @@ class AuthFirebaseService {
   }
 
   Future<void> logout() => FirebaseAuth.instance.signOut();
+
+  User? getCurrentUser() => FirebaseAuth.instance.currentUser;
 }

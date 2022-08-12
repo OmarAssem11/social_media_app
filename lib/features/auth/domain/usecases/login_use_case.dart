@@ -13,8 +13,8 @@ class LoginUseCase implements UseCase<Unit, LoginParams> {
   const LoginUseCase(this._authRepository);
 
   @override
-  Future<Either<Failure, Unit>> call(LoginParams params) =>
-      _authRepository.login(params.loginEntity);
+  Future<Either<Failure, Unit>> call(LoginParams loginParams) =>
+      _authRepository.login(loginParams.loginEntity);
 }
 
 class LoginParams extends AppParams {

@@ -9,4 +9,6 @@ abstract class AuthRepository {
   Future<Either<Failure, Unit>> login(LoginEntity loginEntity);
 
   Future<Either<Failure, Unit>> logout();
+
+  Future<Either<Failure, bool>> isLoggedIn();
 }

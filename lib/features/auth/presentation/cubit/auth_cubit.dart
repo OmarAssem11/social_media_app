@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media_app/core/domain/params/no_params.dart';
 import 'package:social_media_app/features/auth/domain/entities/login_entity.dart';
 import 'package:social_media_app/features/auth/domain/entities/register_entity.dart';
+import 'package:social_media_app/features/auth/domain/usecases/is_logged_in_use_case.dart';
 import 'package:social_media_app/features/auth/domain/usecases/login_use_case.dart';
 import 'package:social_media_app/features/auth/domain/usecases/logout_use_case.dart';
 import 'package:social_media_app/features/auth/domain/usecases/register_use_case.dart';
@@ -12,11 +13,13 @@ class AuthCubit extends Cubit<AuthState> {
     this._registerUseCase,
     this._loginUseCase,
     this._logoutUseCase,
+    this._isLoggedInUseCase,
   ) : super(const AuthInitial());
 
   final RegisterUseCase _registerUseCase;
   final LoginUseCase _loginUseCase;
   final LogoutUseCase _logoutUseCase;
+  final IsLoggedInUseCase _isLoggedInUseCase;
 
   Future<void> register(RegisterEntity registerEntity) async {
     emit(const AuthLoading());
@@ -49,6 +52,19 @@ class AuthCubit extends Cubit<AuthState> {
       result.fold(
         (failure) => const AuthError(),
         (_) => const AuthSuccess(),
+      ),
+    );
+  }
+
+  Future<void> isLoggedIn() async {
+    emit(const AuthLoading());
+    final result = await _isLoggedInUseCase(const NoParams());
+    emit(
+      result.fold(
+        (failure) => const AuthError(),
+        (isLoggedIn) {
+          return isLoggedIn ? const IsLoggedIn() : const NotLoggedIn();
+        },
       ),
     );
   }

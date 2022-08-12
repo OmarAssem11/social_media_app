@@ -13,8 +13,8 @@ class RegisterUseCase implements UseCase<Unit, RegisterParams> {
   const RegisterUseCase(this._authRepository);
 
   @override
-  Future<Either<Failure, Unit>> call(RegisterParams params) =>
-      _authRepository.register(params.registerEntity);
+  Future<Either<Failure, Unit>> call(RegisterParams registerParams) =>
+      _authRepository.register(registerParams.registerEntity);
 }
 
 class RegisterParams extends AppParams {

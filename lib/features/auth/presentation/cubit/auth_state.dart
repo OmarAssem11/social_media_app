@@ -8,4 +8,6 @@ class AuthState with _$AuthState {
   const factory AuthState.loading() = AuthLoading;
   const factory AuthState.success() = AuthSuccess;
   const factory AuthState.error() = AuthError;
+  const factory AuthState.loggedIn() = IsLoggedIn;
+  const factory AuthState.notLoggedIn() = NotLoggedIn;
 }
