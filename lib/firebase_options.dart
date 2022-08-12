@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '649028464951',
     projectId: 'social-media-app-996',
     storageBucket: 'social-media-app-996.appspot.com',
-    iosClientId: '649028464951-ookeu178tl6mvh197m79mni6vktf6c5t.apps.googleusercontent.com',
+    iosClientId:
+        '649028464951-ookeu178tl6mvh197m79mni6vktf6c5t.apps.googleusercontent.com',
     iosBundleId: 'com.omarassem.socialMediaApp',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '649028464951',
     projectId: 'social-media-app-996',
     storageBucket: 'social-media-app-996.appspot.com',
-    iosClientId: '649028464951-ookeu178tl6mvh197m79mni6vktf6c5t.apps.googleusercontent.com',
+    iosClientId:
+        '649028464951-ookeu178tl6mvh197m79mni6vktf6c5t.apps.googleusercontent.com',
     iosBundleId: 'com.omarassem.socialMediaApp',
   );
 }

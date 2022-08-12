@@ -56,6 +56,16 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
+  Future<Either<Failure, Unit>> forgotPassword(String email) async {
+    try {
+      await _authRemoteDataSource.forgotPassword(email);
+      return right(unit);
+    } on AppException catch (appException) {
+      return left(returnFailure(appException));
+    }
+  }
+
+  @override
   Future<Either<Failure, bool>> isLoggedIn() async {
     try {
       final firebaseUser = _authRemoteDataSource.getCurrentUser();

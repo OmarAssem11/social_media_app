@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_app/core/presentation/resources/routes_manager.dart';
-import 'package:social_media_app/core/presentation/resources/strings_manager.dart';
 import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 import 'package:social_media_app/features/onboarding/widgets/page_indicator.dart';
+import 'package:social_media_app/generated/l10n.dart';
 
 class OnboardingFooter extends StatefulWidget {
   const OnboardingFooter();
@@ -33,7 +33,7 @@ class _OnboardingFooterState extends State<OnboardingFooter> {
             onPressed: () =>
                 Navigator.of(context).pushReplacementNamed(AppRoutes.register),
             child: Text(
-              AppStrings.skip,
+              S.current.skip,
               style: textTheme.bodyMedium,
             ),
           ),
@@ -47,7 +47,7 @@ class _OnboardingFooterState extends State<OnboardingFooter> {
               () => _index++,
             ),
             child: Text(
-              AppStrings.next,
+              S.current.next,
               style: textTheme.bodyMedium,
             ),
           ),
