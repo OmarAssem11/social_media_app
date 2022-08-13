@@ -15,5 +15,7 @@
     "canNotBeEmpty": "لا يمكن ان يكون فارغ",
     "emailCanNotBeEmpty": "البريد الإكتروني لا يمكن ان يكون فارغ",
     "invalidEmailFormat": "صيغة الريد الإكتروني خاطئة",
-    "passwordCanNotBeLessThanEightCharacters": "كلمة السر لا يمكن ان تكون اقل من ٨ حروف"
+    "passwordCanNotBeLessThanEightCharacters": "كلمة السر لا يمكن ان تكون اقل من ٨ حروف",
+    "submit": "تأكيد",
+    "checkYourEmail": "تفقد بريدك الإكتروني"
 }

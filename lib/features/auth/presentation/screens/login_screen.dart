@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media_app/core/presentation/resources/routes_manager.dart';
 import 'package:social_media_app/core/presentation/resources/values_manager.dart';
-import 'package:social_media_app/core/presentation/util/show_error_toast.dart';
+import 'package:social_media_app/core/presentation/util/error_toast.dart';
 import 'package:social_media_app/core/presentation/validation/validators.dart';
 import 'package:social_media_app/core/presentation/widgets/custom_elevated_button.dart';
 import 'package:social_media_app/core/presentation/widgets/custom_text_form_field.dart';

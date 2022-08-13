@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "canNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Can\'t be empty"),
+        "checkYourEmail":
+            MessageLookupByLibrary.simpleMessage("Check your email"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "somethingWentWrong":
-            MessageLookupByLibrary.simpleMessage("Something went wrong!")
+            MessageLookupByLibrary.simpleMessage("Something went wrong!"),
+        "submit": MessageLookupByLibrary.simpleMessage("Submit")
       };
 }

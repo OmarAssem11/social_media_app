@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لديك حساب؟"),
         "canNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("لا يمكن ان يكون فارغ"),
+        "checkYourEmail":
+            MessageLookupByLibrary.simpleMessage("تفقد بريدك الإكتروني"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "emailAddress":
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "كلمة السر لا يمكن ان تكون اقل من ٨ حروف"),
         "register": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "skip": MessageLookupByLibrary.simpleMessage("السابق"),
-        "somethingWentWrong": MessageLookupByLibrary.simpleMessage("!حدث خطأ")
+        "somethingWentWrong": MessageLookupByLibrary.simpleMessage("!حدث خطأ"),
+        "submit": MessageLookupByLibrary.simpleMessage("تأكيد")
       };
 }
