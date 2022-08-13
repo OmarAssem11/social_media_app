@@ -6,6 +6,7 @@ import 'package:social_media_app/features/auth/presentation/screens/forgot_passw
 import 'package:social_media_app/features/auth/presentation/screens/login_screen.dart';
 import 'package:social_media_app/features/auth/presentation/screens/register_screen.dart';
 import 'package:social_media_app/features/auth/presentation/screens/starter_screen.dart';
+import 'package:social_media_app/features/posts/presentation/cubit/posts_cubit.dart';
 import 'package:social_media_app/features/posts/presentation/screens/home_screen.dart';
 import 'package:social_media_app/generated/l10n.dart';
 
@@ -22,34 +23,37 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case AppRoutes.starter:
       return MaterialPageRoute(
         builder: (_) => BlocProvider(
-          create: (context) => getIt<AuthCubit>(),
+          create: (_) => getIt<AuthCubit>(),
           child: const StarterScreen(),
         ),
       );
     case AppRoutes.login:
       return MaterialPageRoute(
         builder: (_) => BlocProvider(
-          create: (context) => getIt<AuthCubit>(),
+          create: (_) => getIt<AuthCubit>(),
           child: const LoginScreen(),
         ),
       );
     case AppRoutes.register:
       return MaterialPageRoute(
         builder: (_) => BlocProvider(
-          create: (context) => getIt<AuthCubit>(),
+          create: (_) => getIt<AuthCubit>(),
           child: const RegisterScreen(),
         ),
       );
     case AppRoutes.forgotPassword:
       return MaterialPageRoute(
         builder: (_) => BlocProvider(
-          create: (context) => getIt<AuthCubit>(),
+          create: (_) => getIt<AuthCubit>(),
           child: const ForgotPasswordScreen(),
         ),
       );
     case AppRoutes.home:
       return MaterialPageRoute(
-        builder: (_) => const HomeScreen(),
+        builder: (_) => BlocProvider(
+          create: (_) => getIt<PostsCubit>(),
+          child: const HomeScreen(),
+        ),
       );
     default:
       return undefinedRoute();
