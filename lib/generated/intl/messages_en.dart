@@ -24,17 +24,26 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "canNotBeEmpty":
+            MessageLookupByLibrary.simpleMessage("Can\'t be empty"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
+        "emailCanNotBeEmpty":
+            MessageLookupByLibrary.simpleMessage("Email can\'t be empty"),
         "firstName": MessageLookupByLibrary.simpleMessage("First name"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "invalidEmailFormat":
+            MessageLookupByLibrary.simpleMessage("Invalid email format"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noPageFound": MessageLookupByLibrary.simpleMessage("No page found!"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordCanNotBeLessThanEightCharacters":
+            MessageLookupByLibrary.simpleMessage(
+                "Password can\'t be less than eight characters"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "somethingWentWrong":

@@ -179,6 +179,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Can't be empty`
+  String get canNotBeEmpty {
+    return Intl.message(
+      'Can\'t be empty',
+      name: 'canNotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email can't be empty`
+  String get emailCanNotBeEmpty {
+    return Intl.message(
+      'Email can\'t be empty',
+      name: 'emailCanNotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email format`
+  String get invalidEmailFormat {
+    return Intl.message(
+      'Invalid email format',
+      name: 'invalidEmailFormat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password can't be less than eight characters`
+  String get passwordCanNotBeLessThanEightCharacters {
+    return Intl.message(
+      'Password can\'t be less than eight characters',
+      name: 'passwordCanNotBeLessThanEightCharacters',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
