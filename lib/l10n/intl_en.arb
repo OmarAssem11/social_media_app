@@ -17,5 +17,6 @@
     "invalidEmailFormat": "Invalid email format",
     "passwordCanNotBeLessThanEightCharacters": "Password can't be less than eight characters",
     "submit": "Submit",
-    "checkYourEmail": "Check your email"
+    "checkYourEmail": "Check your email",
+    "resetPassword": "Reset password"
 }

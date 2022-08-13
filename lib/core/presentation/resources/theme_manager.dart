@@ -15,7 +15,6 @@ ThemeData getLightTheme() => ThemeData(
       ),
       //AppBar
       appBarTheme: AppBarTheme(
-        centerTitle: true,
         color: ColorManager.primary,
         elevation: Sizes.s4,
         titleTextStyle: getRegularTextStyle(
@@ -125,7 +124,6 @@ ThemeData getDarkTheme() => ThemeData(
       ),
       //AppBar
       appBarTheme: AppBarTheme(
-        centerTitle: true,
         color: ColorManager.primary,
         elevation: Sizes.s4,
         titleTextStyle: getRegularTextStyle(

@@ -17,5 +17,6 @@
     "invalidEmailFormat": "صيغة الريد الإكتروني خاطئة",
     "passwordCanNotBeLessThanEightCharacters": "كلمة السر لا يمكن ان تكون اقل من ٨ حروف",
     "submit": "تأكيد",
-    "checkYourEmail": "تفقد بريدك الإكتروني"
+    "checkYourEmail": "تفقد بريدك الإكتروني",
+    "resetPassword": "إعادة ضبط كلمة السر"
 }

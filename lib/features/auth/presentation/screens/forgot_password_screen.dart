@@ -32,7 +32,9 @@ class _ForgoPasswordScreenState extends State<ForgotPasswordScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(S.current.resetPassword),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: Insets.xxl),
         child: Form(
@@ -41,11 +43,6 @@ class _ForgoPasswordScreenState extends State<ForgotPasswordScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                S.current.forgotPassword,
-                style: _textTheme.headline4,
-              ),
-              const SizedBox(height: Sizes.s20),
               CustomTextFormField(
                 controller: _emailController,
                 hintText: S.current.emailAddress,
@@ -60,10 +57,7 @@ class _ForgoPasswordScreenState extends State<ForgotPasswordScreen> {
                   state.mapOrNull(
                     loading: (_) => isLoading = true,
                     error: (_) => showToast(),
-                    success: (_) => showDoneSnackBar(
-                      context: context,
-                      message: S.current.checkYourEmail,
-                    ),
+                    success: (_) => showToast(S.current.checkYourEmail),
                   );
                   return CustomElevatedButton(
                     label: S.current.submit,

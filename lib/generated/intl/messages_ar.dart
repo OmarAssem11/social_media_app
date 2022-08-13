@@ -48,6 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "كلمة السر لا يمكن ان تكون اقل من ٨ حروف"),
         "register": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("إعادة ضبط كلمة السر"),
         "skip": MessageLookupByLibrary.simpleMessage("السابق"),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage("!حدث خطأ"),
         "submit": MessageLookupByLibrary.simpleMessage("تأكيد")

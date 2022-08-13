@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Password can\'t be less than eight characters"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "somethingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong!"),
