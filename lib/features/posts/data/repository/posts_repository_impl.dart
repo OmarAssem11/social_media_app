@@ -33,8 +33,9 @@ class PostsRepositoryImpl implements PostsRepository {
   @override
   Future<Either<Failure, List<Post>>> getAllPosts() async {
     try {
-      final postModel = await _postsRemoteDataSource.getAllPosts();
-      final posts = postModel.map((postModel) => postModel.fromModel).toList();
+      final postModels = await _postsRemoteDataSource.getAllPosts();
+      await _postsLocalDataSource.cachePosts(postModels);
+      final posts = postModels.map((postModel) => postModel.fromModel).toList();
       return right(posts);
     } on AppException catch (appException) {
       return left(returnFailure(appException));

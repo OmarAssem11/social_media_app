@@ -3,6 +3,11 @@ import 'package:social_media_app/features/posts/domain/entities/post.dart';
 
 extension PostMapper on Post {
   PostModel get toModel => PostModel(
-        content: content,
+        id: id,
+        text: text,
+        imageUrl: imageUrl,
+        dateTime: dateTime,
+        publisherName: publisherName,
+        publisherImage: publisherImage,
       );
 }
