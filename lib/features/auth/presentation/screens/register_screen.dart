@@ -88,7 +88,7 @@ class _ForgoPasswordScreenState extends State<RegisterScreen> {
                           success: (_) =>
                               WidgetsBinding.instance.addPostFrameCallback(
                             (_) => Navigator.of(context).pushReplacementNamed(
-                              AppRoutes.onboarding,
+                              AppRoutes.home,
                             ),
                           ),
                         );
