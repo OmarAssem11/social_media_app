@@ -9,5 +9,7 @@
     "password": "كلمة السر",
     "firstName": "الأسم الأول",
     "lastName": "أسم العائلة",
-    "alreadyHaveAnAccount": "لديك حساب؟"
+    "alreadyHaveAnAccount": "لديك حساب؟",
+    "doNotHaveAnAccount": "ليس لديك حساب؟",
+    "forgotPassword": "نسيت كلمة السر؟"
 }

@@ -159,6 +159,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Don't have an account?`
+  String get doNotHaveAnAccount {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'doNotHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot password?`
+  String get forgotPassword {
+    return Intl.message(
+      'Forgot password?',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
