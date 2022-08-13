@@ -24,18 +24,27 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب؟"),
+        "canNotBeEmpty":
+            MessageLookupByLibrary.simpleMessage("لا يمكن ان يكون فارغ"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "emailAddress":
             MessageLookupByLibrary.simpleMessage("البريد الإكتروني"),
+        "emailCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "البريد الإكتروني لا يمكن ان يكون فارغ"),
         "firstName": MessageLookupByLibrary.simpleMessage("الأسم الأول"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
+        "invalidEmailFormat":
+            MessageLookupByLibrary.simpleMessage("صيغة الريد الإكتروني خاطئة"),
         "lastName": MessageLookupByLibrary.simpleMessage("أسم العائلة"),
         "login": MessageLookupByLibrary.simpleMessage("نسجيل دخول"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "noPageFound": MessageLookupByLibrary.simpleMessage("!لا يوجد صفحة"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة السر"),
+        "passwordCanNotBeLessThanEightCharacters":
+            MessageLookupByLibrary.simpleMessage(
+                "كلمة السر لا يمكن ان تكون اقل من ٨ حروف"),
         "register": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "skip": MessageLookupByLibrary.simpleMessage("السابق"),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage("!حدث خطأ")

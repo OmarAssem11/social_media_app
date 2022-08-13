@@ -11,5 +11,9 @@
     "lastName": "Last name",
     "alreadyHaveAnAccount": "Already have an account?",
     "doNotHaveAnAccount": "Don't have an account?",
-    "forgotPassword": "Forgot password?"
+    "forgotPassword": "Forgot password?",
+    "canNotBeEmpty": "Can't be empty",
+    "emailCanNotBeEmpty": "Email can't be empty",
+    "invalidEmailFormat": "Invalid email format",
+    "passwordCanNotBeLessThanEightCharacters": "Password can't be less than eight characters"
 }
