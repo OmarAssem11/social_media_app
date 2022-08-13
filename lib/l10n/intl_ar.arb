@@ -1,0 +1,22 @@
+{
+    "noPageFound": "!لا يوجد صفحة",
+    "somethingWentWrong": "!حدث خطأ",
+    "next": "التالي",
+    "skip": "السابق",
+    "register": "إنشاء حساب",
+    "login": "نسجيل دخول",
+    "emailAddress": "البريد الإكتروني",
+    "password": "كلمة السر",
+    "firstName": "الأسم الأول",
+    "lastName": "أسم العائلة",
+    "alreadyHaveAnAccount": "لديك حساب؟",
+    "doNotHaveAnAccount": "ليس لديك حساب؟",
+    "forgotPassword": "نسيت كلمة السر؟",
+    "canNotBeEmpty": "لا يمكن ان يكون فارغ",
+    "emailCanNotBeEmpty": "البريد الإكتروني لا يمكن ان يكون فارغ",
+    "invalidEmailFormat": "صيغة الريد الإكتروني خاطئة",
+    "passwordCanNotBeLessThanEightCharacters": "كلمة السر لا يمكن ان تكون اقل من ٨ حروف",
+    "submit": "تأكيد",
+    "checkYourEmail": "تفقد بريدك الإكتروني",
+    "resetPassword": "إعادة ضبط كلمة السر"
+}
