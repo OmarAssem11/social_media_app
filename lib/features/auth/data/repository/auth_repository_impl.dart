@@ -9,7 +9,7 @@ import 'package:social_media_app/features/auth/data/mappers/login_mappers/login_
 import 'package:social_media_app/features/auth/data/mappers/register_mappers/register_entity_mapper.dart';
 import 'package:social_media_app/features/auth/domain/entities/login_entity.dart';
 import 'package:social_media_app/features/auth/domain/entities/register_entity.dart';
-import 'package:social_media_app/features/auth/domain/repositories/auth_repository.dart';
+import 'package:social_media_app/features/auth/domain/repository/auth_repository.dart';
 
 @LazySingleton(as: AuthRepository)
 class AuthRepositoryImpl implements AuthRepository {

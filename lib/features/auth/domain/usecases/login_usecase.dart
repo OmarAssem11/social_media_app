@@ -4,7 +4,7 @@ import 'package:social_media_app/core/domain/failure/failure.dart';
 import 'package:social_media_app/core/domain/params/app_params.dart';
 import 'package:social_media_app/core/domain/usecases/usecase.dart';
 import 'package:social_media_app/features/auth/domain/entities/login_entity.dart';
-import 'package:social_media_app/features/auth/domain/repositories/auth_repository.dart';
+import 'package:social_media_app/features/auth/domain/repository/auth_repository.dart';
 
 @lazySingleton
 class LoginUseCase implements UseCase<Unit, LoginParams> {

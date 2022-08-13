@@ -3,11 +3,11 @@ import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/domain/params/no_params.dart';
 import 'package:social_media_app/features/auth/domain/entities/login_entity.dart';
 import 'package:social_media_app/features/auth/domain/entities/register_entity.dart';
-import 'package:social_media_app/features/auth/domain/usecases/forgot_password_use_case.dart';
-import 'package:social_media_app/features/auth/domain/usecases/is_logged_in_use_case.dart';
-import 'package:social_media_app/features/auth/domain/usecases/login_use_case.dart';
-import 'package:social_media_app/features/auth/domain/usecases/logout_use_case.dart';
-import 'package:social_media_app/features/auth/domain/usecases/register_use_case.dart';
+import 'package:social_media_app/features/auth/domain/usecases/forgot_password_usecase.dart';
+import 'package:social_media_app/features/auth/domain/usecases/is_logged_in_usecase.dart';
+import 'package:social_media_app/features/auth/domain/usecases/login_usecase.dart';
+import 'package:social_media_app/features/auth/domain/usecases/logout_usecase.dart';
+import 'package:social_media_app/features/auth/domain/usecases/register_usecase.dart';
 import 'package:social_media_app/features/auth/presentation/cubit/auth_state.dart';
 
 @injectable
