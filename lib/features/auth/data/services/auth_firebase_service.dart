@@ -46,7 +46,8 @@ class AuthFirebaseService {
 
   Future<void> logout() => FirebaseAuth.instance.signOut();
 
-  Future<void> forgotPassword(String email) async {}
+  Future<void> forgotPassword(String email) =>
+      FirebaseAuth.instance.sendPasswordResetEmail(email: email);
 
   User? getCurrentUser() => FirebaseAuth.instance.currentUser;
 }

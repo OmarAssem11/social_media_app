@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 import 'package:social_media_app/core/presentation/util/done_snack_bar.dart';
-import 'package:social_media_app/core/presentation/util/error_toast.dart';
+import 'package:social_media_app/core/presentation/util/toast.dart';
 import 'package:social_media_app/core/presentation/validation/validators.dart';
 import 'package:social_media_app/core/presentation/widgets/custom_elevated_button.dart';
 import 'package:social_media_app/core/presentation/widgets/custom_text_form_field.dart';
@@ -59,7 +59,7 @@ class _ForgoPasswordScreenState extends State<ForgotPasswordScreen> {
                   bool isLoading = false;
                   state.mapOrNull(
                     loading: (_) => isLoading = true,
-                    error: (_) => showErrorToast(),
+                    error: (_) => showToast(),
                     success: (_) => showDoneSnackBar(
                       context: context,
                       message: S.current.checkYourEmail,
