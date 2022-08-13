@@ -9,5 +9,7 @@
     "password": "Password",
     "firstName": "First name",
     "lastName": "Last name",
-    "alreadyHaveAnAccount": "Already have an account?"
+    "alreadyHaveAnAccount": "Already have an account?",
+    "doNotHaveAnAccount": "Don't have an account?",
+    "forgotPassword": "Forgot password?"
 }
