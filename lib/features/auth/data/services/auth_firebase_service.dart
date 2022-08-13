@@ -8,6 +8,8 @@ import 'package:social_media_app/features/auth/data/models/register_model/regist
 
 @lazySingleton
 class AuthFirebaseService {
+  const AuthFirebaseService();
+
   Future<UserModel> register(RegisterModel registerModel) async {
     final userCredential =
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
