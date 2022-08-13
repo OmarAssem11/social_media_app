@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media_app/core/presentation/resources/routes_manager.dart';
-import 'package:social_media_app/core/presentation/util/error_toast.dart';
+import 'package:social_media_app/core/presentation/util/toast.dart';
 import 'package:social_media_app/core/presentation/widgets/loading_indicator.dart';
 import 'package:social_media_app/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:social_media_app/features/auth/presentation/cubit/auth_state.dart';
@@ -28,7 +28,7 @@ class _StarterScreenState extends State<StarterScreen> {
             Navigator.of(context).pushReplacementNamed(AppRoutes.home),
         notLoggedIn: (_) =>
             Navigator.of(context).pushReplacementNamed(AppRoutes.login),
-        error: (_) => showErrorToast(),
+        error: (_) => showToast(),
       ),
       child: const Scaffold(
         body: LoadingIndicator(),
