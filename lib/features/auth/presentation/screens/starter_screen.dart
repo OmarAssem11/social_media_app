@@ -25,7 +25,7 @@ class _StarterScreenState extends State<StarterScreen> {
     return BlocListener<AuthCubit, AuthState>(
       listener: (context, state) => state.mapOrNull(
         loggedIn: (_) =>
-            Navigator.of(context).pushReplacementNamed(AppRoutes.onboarding),
+            Navigator.of(context).pushReplacementNamed(AppRoutes.home),
         notLoggedIn: (_) =>
             Navigator.of(context).pushReplacementNamed(AppRoutes.login),
         error: (_) => showErrorToast(),
