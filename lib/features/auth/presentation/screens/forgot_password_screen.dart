@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media_app/core/presentation/resources/values_manager.dart';
-import 'package:social_media_app/core/presentation/util/done_snack_bar.dart';
 import 'package:social_media_app/core/presentation/util/toast.dart';
 import 'package:social_media_app/core/presentation/validation/validators.dart';
 import 'package:social_media_app/core/presentation/widgets/custom_elevated_button.dart';
@@ -20,13 +19,6 @@ class ForgotPasswordScreen extends StatefulWidget {
 class _ForgoPasswordScreenState extends State<ForgotPasswordScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
-  late TextTheme _textTheme;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _textTheme = Theme.of(context).textTheme;
-  }
 
   @override
   Widget build(BuildContext context) {

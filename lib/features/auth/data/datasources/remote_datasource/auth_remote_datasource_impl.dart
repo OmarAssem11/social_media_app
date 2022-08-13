@@ -2,10 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/exceptions/return_app_exception.dart';
 import 'package:social_media_app/core/data/models/user_model.dart';
+import 'package:social_media_app/features/auth/data/datasources/remote_datasource/auth_remote_datasource.dart';
 import 'package:social_media_app/features/auth/data/models/login_model/login_model.dart';
 import 'package:social_media_app/features/auth/data/models/register_model/register_model.dart';
 import 'package:social_media_app/features/auth/data/services/auth_firebase_service.dart';
-import 'package:social_media_app/features/auth/domain/datasources/auth_remote_datasource.dart';
 
 @LazySingleton(as: AuthRemoteDataSource)
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
