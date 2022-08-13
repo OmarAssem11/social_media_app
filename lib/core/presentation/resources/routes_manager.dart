@@ -7,6 +7,7 @@ import 'package:social_media_app/features/auth/presentation/screens/login_screen
 import 'package:social_media_app/features/auth/presentation/screens/register_screen.dart';
 import 'package:social_media_app/features/auth/presentation/screens/starter_screen.dart';
 import 'package:social_media_app/features/onboarding/presentation/onboarding_screen.dart';
+import 'package:social_media_app/features/posts/presentation/screens/home_screen.dart';
 import 'package:social_media_app/generated/l10n.dart';
 
 class AppRoutes {
@@ -15,6 +16,7 @@ class AppRoutes {
   static const String login = '/login';
   static const String register = '/register';
   static const String forgotPassword = '/forgotPassword';
+  static const String home = '/home';
 }
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -50,6 +52,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
           create: (context) => getIt<AuthCubit>(),
           child: const ForgotPasswordScreen(),
         ),
+      );
+    case AppRoutes.home:
+      return MaterialPageRoute(
+        builder: (_) => const HomeScreen(),
       );
     default:
       return undefinedRoute();
