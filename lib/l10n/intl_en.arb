@@ -15,5 +15,7 @@
     "canNotBeEmpty": "Can't be empty",
     "emailCanNotBeEmpty": "Email can't be empty",
     "invalidEmailFormat": "Invalid email format",
-    "passwordCanNotBeLessThanEightCharacters": "Password can't be less than eight characters"
+    "passwordCanNotBeLessThanEightCharacters": "Password can't be less than eight characters",
+    "submit": "Submit",
+    "checkYourEmail": "Check your email"
 }
