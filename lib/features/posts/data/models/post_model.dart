@@ -7,10 +7,14 @@ part 'post_model.g.dart';
 class PostModel {
   final String id;
   final String text;
+  @JsonKey(name: 'image_url')
   final String imageUrl;
   @TimestampConverter()
+  @JsonKey(name: 'date_time')
   final DateTime dateTime;
+  @JsonKey(name: 'publisher_name')
   final String publisherName;
+  @JsonKey(name: 'publisher_image')
   final String publisherImage;
 
   const PostModel({

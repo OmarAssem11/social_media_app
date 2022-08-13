@@ -7,5 +7,5 @@ abstract class PostsRemoteDataSource {
 
   Future<void> editPost(PostModel postModel);
 
-  Future<void> deletePost(int postId);
+  Future<void> deletePost(String postId);
 }

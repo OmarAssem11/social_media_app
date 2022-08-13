@@ -57,7 +57,7 @@ class PostsCubit extends Cubit<PostsState> {
     );
   }
 
-  Future<void> deletePost(int postId) async {
+  Future<void> deletePost(String postId) async {
     emit(const PostsLoading());
     final result = await _deletePostUseCase(DeletePostParams(postId));
     emit(

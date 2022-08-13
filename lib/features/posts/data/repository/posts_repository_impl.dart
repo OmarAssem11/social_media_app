@@ -53,7 +53,7 @@ class PostsRepositoryImpl implements PostsRepository {
   }
 
   @override
-  Future<Either<Failure, Unit>> deletePost(int postId) async {
+  Future<Either<Failure, Unit>> deletePost(String postId) async {
     try {
       await _postsRemoteDataSource.deletePost(postId);
       return right(unit);

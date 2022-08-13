@@ -38,7 +38,7 @@ class PostsRemoteDataSourceImpl implements PostsRemoteDataSource {
   }
 
   @override
-  Future<void> deletePost(int postId) {
+  Future<void> deletePost(String postId) {
     try {
       return _postsFirebaseService.deletePost(postId);
     } catch (exception) {

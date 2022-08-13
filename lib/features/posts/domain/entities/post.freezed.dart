@@ -151,7 +151,7 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
 
 class _$_Post implements _Post {
   const _$_Post(
-      {required this.id,
+      {this.id = '',
       required this.text,
       required this.imageUrl,
       required this.dateTime,
@@ -159,6 +159,7 @@ class _$_Post implements _Post {
       required this.publisherImage});
 
   @override
+  @JsonKey()
   final String id;
   @override
   final String text;
@@ -209,7 +210,7 @@ class _$_Post implements _Post {
 
 abstract class _Post implements Post {
   const factory _Post(
-      {required final String id,
+      {final String id,
       required final String text,
       required final String imageUrl,
       required final DateTime dateTime,

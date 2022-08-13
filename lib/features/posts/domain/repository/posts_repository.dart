@@ -9,5 +9,5 @@ abstract class PostsRepository {
 
   Future<Either<Failure, Unit>> editPost(Post post);
 
-  Future<Either<Failure, Unit>> deletePost(int postId);
+  Future<Either<Failure, Unit>> deletePost(String postId);
 }

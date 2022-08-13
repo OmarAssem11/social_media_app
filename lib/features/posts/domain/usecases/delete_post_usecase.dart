@@ -17,7 +17,7 @@ class DeletePostUseCase implements UseCase<Unit, DeletePostParams> {
 }
 
 class DeletePostParams extends AppParams {
-  final int postId;
+  final String postId;
 
   DeletePostParams(this.postId);
 
