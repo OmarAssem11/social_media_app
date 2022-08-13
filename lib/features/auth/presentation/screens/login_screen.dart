@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: Sizes.s24),
+        padding: const EdgeInsets.symmetric(horizontal: Insets.xxl),
         child: Form(
           key: _formKey,
           child: Column(
