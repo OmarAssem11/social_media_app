@@ -40,7 +40,8 @@ import '../features/posts/domain/usecases/add_post_usecase.dart' as _i23;
 import '../features/posts/domain/usecases/delete_post_usecase.dart' as _i25;
 import '../features/posts/domain/usecases/edit_post_usecase.dart' as _i26;
 import '../features/posts/domain/usecases/get_all_posts_usecase.dart' as _i27;
-import 'app_module.dart' as _i28; // ignore_for_file: unnecessary_lambdas
+import '../features/posts/presentation/cubit/posts_cubit.dart' as _i28;
+import 'app_module.dart' as _i29; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -89,7 +90,12 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
       () => _i26.EditPostUseCase(get<_i20.PostsRepository>()));
   gh.lazySingleton<_i27.GetAllPostsUseCase>(
       () => _i27.GetAllPostsUseCase(get<_i20.PostsRepository>()));
+  gh.factory<_i28.PostsCubit>(() => _i28.PostsCubit(
+      get<_i23.AddPostUseCase>(),
+      get<_i27.GetAllPostsUseCase>(),
+      get<_i26.EditPostUseCase>(),
+      get<_i25.DeletePostUseCase>()));
   return get;
 }
 
-class _$AppModule extends _i28.AppModule {}
+class _$AppModule extends _i29.AppModule {}

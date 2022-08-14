@@ -22,6 +22,9 @@ mixin _$PostsState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function() error,
+    required TResult Function() getPostsLoading,
+    required TResult Function(List<Post> posts) getPostsSuccess,
+    required TResult Function() getPostsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$PostsState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$PostsState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +56,9 @@ mixin _$PostsState {
     required TResult Function(PostsLoading value) loading,
     required TResult Function(PostsSuccess value) success,
     required TResult Function(PostsError value) error,
+    required TResult Function(GetPostsLoading value) getPostsLoading,
+    required TResult Function(GetPostsSuccess value) getPostsSuccess,
+    required TResult Function(GetPostsError value) getPostsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +67,9 @@ mixin _$PostsState {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +78,9 @@ mixin _$PostsState {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,6 +146,9 @@ class _$PostsInitial implements PostsInitial {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function() error,
+    required TResult Function() getPostsLoading,
+    required TResult Function(List<Post> posts) getPostsSuccess,
+    required TResult Function() getPostsError,
   }) {
     return initial();
   }
@@ -139,6 +160,9 @@ class _$PostsInitial implements PostsInitial {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
   }) {
     return initial?.call();
   }
@@ -150,6 +174,9 @@ class _$PostsInitial implements PostsInitial {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -165,6 +192,9 @@ class _$PostsInitial implements PostsInitial {
     required TResult Function(PostsLoading value) loading,
     required TResult Function(PostsSuccess value) success,
     required TResult Function(PostsError value) error,
+    required TResult Function(GetPostsLoading value) getPostsLoading,
+    required TResult Function(GetPostsSuccess value) getPostsSuccess,
+    required TResult Function(GetPostsError value) getPostsError,
   }) {
     return initial(this);
   }
@@ -176,6 +206,9 @@ class _$PostsInitial implements PostsInitial {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
   }) {
     return initial?.call(this);
   }
@@ -187,6 +220,9 @@ class _$PostsInitial implements PostsInitial {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -244,6 +280,9 @@ class _$PostsLoading implements PostsLoading {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function() error,
+    required TResult Function() getPostsLoading,
+    required TResult Function(List<Post> posts) getPostsSuccess,
+    required TResult Function() getPostsError,
   }) {
     return loading();
   }
@@ -255,6 +294,9 @@ class _$PostsLoading implements PostsLoading {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
   }) {
     return loading?.call();
   }
@@ -266,6 +308,9 @@ class _$PostsLoading implements PostsLoading {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -281,6 +326,9 @@ class _$PostsLoading implements PostsLoading {
     required TResult Function(PostsLoading value) loading,
     required TResult Function(PostsSuccess value) success,
     required TResult Function(PostsError value) error,
+    required TResult Function(GetPostsLoading value) getPostsLoading,
+    required TResult Function(GetPostsSuccess value) getPostsSuccess,
+    required TResult Function(GetPostsError value) getPostsError,
   }) {
     return loading(this);
   }
@@ -292,6 +340,9 @@ class _$PostsLoading implements PostsLoading {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
   }) {
     return loading?.call(this);
   }
@@ -303,6 +354,9 @@ class _$PostsLoading implements PostsLoading {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -360,6 +414,9 @@ class _$PostsSuccess implements PostsSuccess {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function() error,
+    required TResult Function() getPostsLoading,
+    required TResult Function(List<Post> posts) getPostsSuccess,
+    required TResult Function() getPostsError,
   }) {
     return success();
   }
@@ -371,6 +428,9 @@ class _$PostsSuccess implements PostsSuccess {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
   }) {
     return success?.call();
   }
@@ -382,6 +442,9 @@ class _$PostsSuccess implements PostsSuccess {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -397,6 +460,9 @@ class _$PostsSuccess implements PostsSuccess {
     required TResult Function(PostsLoading value) loading,
     required TResult Function(PostsSuccess value) success,
     required TResult Function(PostsError value) error,
+    required TResult Function(GetPostsLoading value) getPostsLoading,
+    required TResult Function(GetPostsSuccess value) getPostsSuccess,
+    required TResult Function(GetPostsError value) getPostsError,
   }) {
     return success(this);
   }
@@ -408,6 +474,9 @@ class _$PostsSuccess implements PostsSuccess {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
   }) {
     return success?.call(this);
   }
@@ -419,6 +488,9 @@ class _$PostsSuccess implements PostsSuccess {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -476,6 +548,9 @@ class _$PostsError implements PostsError {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function() error,
+    required TResult Function() getPostsLoading,
+    required TResult Function(List<Post> posts) getPostsSuccess,
+    required TResult Function() getPostsError,
   }) {
     return error();
   }
@@ -487,6 +562,9 @@ class _$PostsError implements PostsError {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
   }) {
     return error?.call();
   }
@@ -498,6 +576,9 @@ class _$PostsError implements PostsError {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -513,6 +594,9 @@ class _$PostsError implements PostsError {
     required TResult Function(PostsLoading value) loading,
     required TResult Function(PostsSuccess value) success,
     required TResult Function(PostsError value) error,
+    required TResult Function(GetPostsLoading value) getPostsLoading,
+    required TResult Function(GetPostsSuccess value) getPostsSuccess,
+    required TResult Function(GetPostsError value) getPostsError,
   }) {
     return error(this);
   }
@@ -524,6 +608,9 @@ class _$PostsError implements PostsError {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
   }) {
     return error?.call(this);
   }
@@ -535,6 +622,9 @@ class _$PostsError implements PostsError {
     TResult Function(PostsLoading value)? loading,
     TResult Function(PostsSuccess value)? success,
     TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -546,4 +636,441 @@ class _$PostsError implements PostsError {
 
 abstract class PostsError implements PostsState {
   const factory PostsError() = _$PostsError;
+}
+
+/// @nodoc
+abstract class _$$GetPostsLoadingCopyWith<$Res> {
+  factory _$$GetPostsLoadingCopyWith(
+          _$GetPostsLoading value, $Res Function(_$GetPostsLoading) then) =
+      __$$GetPostsLoadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetPostsLoadingCopyWithImpl<$Res>
+    extends _$PostsStateCopyWithImpl<$Res>
+    implements _$$GetPostsLoadingCopyWith<$Res> {
+  __$$GetPostsLoadingCopyWithImpl(
+      _$GetPostsLoading _value, $Res Function(_$GetPostsLoading) _then)
+      : super(_value, (v) => _then(v as _$GetPostsLoading));
+
+  @override
+  _$GetPostsLoading get _value => super._value as _$GetPostsLoading;
+}
+
+/// @nodoc
+
+class _$GetPostsLoading implements GetPostsLoading {
+  const _$GetPostsLoading();
+
+  @override
+  String toString() {
+    return 'PostsState.getPostsLoading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetPostsLoading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function() error,
+    required TResult Function() getPostsLoading,
+    required TResult Function(List<Post> posts) getPostsSuccess,
+    required TResult Function() getPostsError,
+  }) {
+    return getPostsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
+  }) {
+    return getPostsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
+    required TResult orElse(),
+  }) {
+    if (getPostsLoading != null) {
+      return getPostsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PostsInitial value) initial,
+    required TResult Function(PostsLoading value) loading,
+    required TResult Function(PostsSuccess value) success,
+    required TResult Function(PostsError value) error,
+    required TResult Function(GetPostsLoading value) getPostsLoading,
+    required TResult Function(GetPostsSuccess value) getPostsSuccess,
+    required TResult Function(GetPostsError value) getPostsError,
+  }) {
+    return getPostsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(PostsInitial value)? initial,
+    TResult Function(PostsLoading value)? loading,
+    TResult Function(PostsSuccess value)? success,
+    TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
+  }) {
+    return getPostsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PostsInitial value)? initial,
+    TResult Function(PostsLoading value)? loading,
+    TResult Function(PostsSuccess value)? success,
+    TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
+    required TResult orElse(),
+  }) {
+    if (getPostsLoading != null) {
+      return getPostsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetPostsLoading implements PostsState {
+  const factory GetPostsLoading() = _$GetPostsLoading;
+}
+
+/// @nodoc
+abstract class _$$GetPostsSuccessCopyWith<$Res> {
+  factory _$$GetPostsSuccessCopyWith(
+          _$GetPostsSuccess value, $Res Function(_$GetPostsSuccess) then) =
+      __$$GetPostsSuccessCopyWithImpl<$Res>;
+  $Res call({List<Post> posts});
+}
+
+/// @nodoc
+class __$$GetPostsSuccessCopyWithImpl<$Res>
+    extends _$PostsStateCopyWithImpl<$Res>
+    implements _$$GetPostsSuccessCopyWith<$Res> {
+  __$$GetPostsSuccessCopyWithImpl(
+      _$GetPostsSuccess _value, $Res Function(_$GetPostsSuccess) _then)
+      : super(_value, (v) => _then(v as _$GetPostsSuccess));
+
+  @override
+  _$GetPostsSuccess get _value => super._value as _$GetPostsSuccess;
+
+  @override
+  $Res call({
+    Object? posts = freezed,
+  }) {
+    return _then(_$GetPostsSuccess(
+      posts == freezed
+          ? _value._posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as List<Post>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetPostsSuccess implements GetPostsSuccess {
+  const _$GetPostsSuccess(final List<Post> posts) : _posts = posts;
+
+  final List<Post> _posts;
+  @override
+  List<Post> get posts {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_posts);
+  }
+
+  @override
+  String toString() {
+    return 'PostsState.getPostsSuccess(posts: $posts)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetPostsSuccess &&
+            const DeepCollectionEquality().equals(other._posts, _posts));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_posts));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$GetPostsSuccessCopyWith<_$GetPostsSuccess> get copyWith =>
+      __$$GetPostsSuccessCopyWithImpl<_$GetPostsSuccess>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function() error,
+    required TResult Function() getPostsLoading,
+    required TResult Function(List<Post> posts) getPostsSuccess,
+    required TResult Function() getPostsError,
+  }) {
+    return getPostsSuccess(posts);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
+  }) {
+    return getPostsSuccess?.call(posts);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
+    required TResult orElse(),
+  }) {
+    if (getPostsSuccess != null) {
+      return getPostsSuccess(posts);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PostsInitial value) initial,
+    required TResult Function(PostsLoading value) loading,
+    required TResult Function(PostsSuccess value) success,
+    required TResult Function(PostsError value) error,
+    required TResult Function(GetPostsLoading value) getPostsLoading,
+    required TResult Function(GetPostsSuccess value) getPostsSuccess,
+    required TResult Function(GetPostsError value) getPostsError,
+  }) {
+    return getPostsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(PostsInitial value)? initial,
+    TResult Function(PostsLoading value)? loading,
+    TResult Function(PostsSuccess value)? success,
+    TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
+  }) {
+    return getPostsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PostsInitial value)? initial,
+    TResult Function(PostsLoading value)? loading,
+    TResult Function(PostsSuccess value)? success,
+    TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
+    required TResult orElse(),
+  }) {
+    if (getPostsSuccess != null) {
+      return getPostsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetPostsSuccess implements PostsState {
+  const factory GetPostsSuccess(final List<Post> posts) = _$GetPostsSuccess;
+
+  List<Post> get posts;
+  @JsonKey(ignore: true)
+  _$$GetPostsSuccessCopyWith<_$GetPostsSuccess> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetPostsErrorCopyWith<$Res> {
+  factory _$$GetPostsErrorCopyWith(
+          _$GetPostsError value, $Res Function(_$GetPostsError) then) =
+      __$$GetPostsErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetPostsErrorCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
+    implements _$$GetPostsErrorCopyWith<$Res> {
+  __$$GetPostsErrorCopyWithImpl(
+      _$GetPostsError _value, $Res Function(_$GetPostsError) _then)
+      : super(_value, (v) => _then(v as _$GetPostsError));
+
+  @override
+  _$GetPostsError get _value => super._value as _$GetPostsError;
+}
+
+/// @nodoc
+
+class _$GetPostsError implements GetPostsError {
+  const _$GetPostsError();
+
+  @override
+  String toString() {
+    return 'PostsState.getPostsError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetPostsError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function() error,
+    required TResult Function() getPostsLoading,
+    required TResult Function(List<Post> posts) getPostsSuccess,
+    required TResult Function() getPostsError,
+  }) {
+    return getPostsError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
+  }) {
+    return getPostsError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function()? error,
+    TResult Function()? getPostsLoading,
+    TResult Function(List<Post> posts)? getPostsSuccess,
+    TResult Function()? getPostsError,
+    required TResult orElse(),
+  }) {
+    if (getPostsError != null) {
+      return getPostsError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PostsInitial value) initial,
+    required TResult Function(PostsLoading value) loading,
+    required TResult Function(PostsSuccess value) success,
+    required TResult Function(PostsError value) error,
+    required TResult Function(GetPostsLoading value) getPostsLoading,
+    required TResult Function(GetPostsSuccess value) getPostsSuccess,
+    required TResult Function(GetPostsError value) getPostsError,
+  }) {
+    return getPostsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(PostsInitial value)? initial,
+    TResult Function(PostsLoading value)? loading,
+    TResult Function(PostsSuccess value)? success,
+    TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
+  }) {
+    return getPostsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PostsInitial value)? initial,
+    TResult Function(PostsLoading value)? loading,
+    TResult Function(PostsSuccess value)? success,
+    TResult Function(PostsError value)? error,
+    TResult Function(GetPostsLoading value)? getPostsLoading,
+    TResult Function(GetPostsSuccess value)? getPostsSuccess,
+    TResult Function(GetPostsError value)? getPostsError,
+    required TResult orElse(),
+  }) {
+    if (getPostsError != null) {
+      return getPostsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetPostsError implements PostsState {
+  const factory GetPostsError() = _$GetPostsError;
 }
