@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:social_media_app/core/presentation/resources/routes_manager.dart';
 import 'package:social_media_app/core/presentation/widgets/error_indicator.dart';
 import 'package:social_media_app/core/presentation/widgets/loading_indicator.dart';
 import 'package:social_media_app/features/posts/presentation/cubit/posts_cubit.dart';
 import 'package:social_media_app/features/posts/presentation/cubit/posts_state.dart';
 import 'package:social_media_app/features/posts/presentation/widgets/post_item.dart';
+import 'package:social_media_app/generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen();
@@ -23,7 +25,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(S.current.appName),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add_rounded),
+            onPressed: () => Navigator.of(context).pushNamed(AppRoutes.addPost),
+          ),
+        ],
+      ),
       body: BlocBuilder<PostsCubit, PostsState>(
         builder: (context, state) {
           return state.maybeWhen(

@@ -1,4 +1,5 @@
 {
+    "appName": "Hashtag",
     "noPageFound": "No page found!",
     "somethingWentWrong": "Something went wrong!",
     "next": "Next",
@@ -18,5 +19,7 @@
     "passwordCanNotBeLessThanEightCharacters": "Password can't be less than eight characters",
     "submit": "Submit",
     "checkYourEmail": "Check your email",
-    "resetPassword": "Reset password"
+    "resetPassword": "Reset password",
+    "addPost": "Add post",
+    "whatIsOnYourMind": "What's on your mind?"
 }

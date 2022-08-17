@@ -7,6 +7,7 @@ import 'package:social_media_app/features/auth/presentation/screens/login_screen
 import 'package:social_media_app/features/auth/presentation/screens/register_screen.dart';
 import 'package:social_media_app/features/auth/presentation/screens/starter_screen.dart';
 import 'package:social_media_app/features/posts/presentation/cubit/posts_cubit.dart';
+import 'package:social_media_app/features/posts/presentation/screens/add_post_screen.dart';
 import 'package:social_media_app/features/posts/presentation/screens/home_screen.dart';
 import 'package:social_media_app/generated/l10n.dart';
 
@@ -16,6 +17,7 @@ class AppRoutes {
   static const String register = '/register';
   static const String forgotPassword = '/forgotPassword';
   static const String home = '/home';
+  static const String addPost = '/add_post';
 }
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -53,6 +55,13 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
         builder: (_) => BlocProvider(
           create: (_) => getIt<PostsCubit>(),
           child: const HomeScreen(),
+        ),
+      );
+    case AppRoutes.addPost:
+      return MaterialPageRoute(
+        builder: (_) => BlocProvider(
+          create: (_) => getIt<PostsCubit>(),
+          child: const AddPostScreen(),
         ),
       );
     default:

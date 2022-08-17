@@ -21,7 +21,7 @@ class CustomElevatedButton extends StatelessWidget {
         fixedSize: MaterialStateProperty.all(
           Size(
             screenSize.width,
-            .07 * screenSize.height,
+            .06 * screenSize.height,
           ),
         ),
         shape: MaterialStateProperty.all(

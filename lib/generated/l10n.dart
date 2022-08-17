@@ -50,6 +50,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Hashtag`
+  String get appName {
+    return Intl.message(
+      'Hashtag',
+      name: 'appName',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No page found!`
   String get noPageFound {
     return Intl.message(
@@ -245,6 +255,26 @@ class S {
     return Intl.message(
       'Reset password',
       name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add post`
+  String get addPost {
+    return Intl.message(
+      'Add post',
+      name: 'addPost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What's on your mind?`
+  String get whatIsOnYourMind {
+    return Intl.message(
+      'What\'s on your mind?',
+      name: 'whatIsOnYourMind',
       desc: '',
       args: [],
     );

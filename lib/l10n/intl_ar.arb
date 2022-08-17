@@ -1,4 +1,5 @@
 {
+    "appName": "هاشتاج",
     "noPageFound": "!لا يوجد صفحة",
     "somethingWentWrong": "!حدث خطأ",
     "next": "التالي",
@@ -18,5 +19,7 @@
     "passwordCanNotBeLessThanEightCharacters": "كلمة السر لا يمكن ان تكون اقل من ٨ حروف",
     "submit": "تأكيد",
     "checkYourEmail": "تفقد بريدك الإكتروني",
-    "resetPassword": "إعادة ضبط كلمة السر"
+    "resetPassword": "إعادة ضبط كلمة السر",
+    "addPost": "أضف منشور",
+    "whatIsOnYourMind": "بم تفكر؟"
 }

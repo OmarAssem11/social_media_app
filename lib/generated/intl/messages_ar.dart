@@ -22,8 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addPost": MessageLookupByLibrary.simpleMessage("أضف منشور"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب؟"),
+        "appName": MessageLookupByLibrary.simpleMessage("هاشتاج"),
         "canNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("لا يمكن ان يكون فارغ"),
         "checkYourEmail":
@@ -52,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إعادة ضبط كلمة السر"),
         "skip": MessageLookupByLibrary.simpleMessage("السابق"),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage("!حدث خطأ"),
-        "submit": MessageLookupByLibrary.simpleMessage("تأكيد")
+        "submit": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "whatIsOnYourMind": MessageLookupByLibrary.simpleMessage("بم تفكر؟")
       };
 }
