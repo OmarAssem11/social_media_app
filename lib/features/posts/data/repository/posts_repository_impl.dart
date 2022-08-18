@@ -1,29 +1,55 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/exceptions/app_exception.dart';
+import 'package:social_media_app/core/data/models/user_model.dart';
 import 'package:social_media_app/core/domain/failure/failure.dart';
 import 'package:social_media_app/core/domain/failure/return_failure.dart';
+import 'package:social_media_app/features/auth/data/datasources/local_datasource/auth_local_datasource.dart';
 import 'package:social_media_app/features/posts/data/datasources/local_datasource/posts_local_datasource.dart';
 import 'package:social_media_app/features/posts/data/datasources/remote_datasource/posts_remote_datasource.dart';
 import 'package:social_media_app/features/posts/data/mappers/post_mapper.dart';
 import 'package:social_media_app/features/posts/data/mappers/post_model_mapper.dart';
+import 'package:social_media_app/features/posts/data/models/post_model.dart';
 import 'package:social_media_app/features/posts/domain/entities/post.dart';
 import 'package:social_media_app/features/posts/domain/repository/posts_repository.dart';
 
 @LazySingleton(as: PostsRepository)
 class PostsRepositoryImpl implements PostsRepository {
-  final PostsLocalDataSource _postsLocalDataSource;
   final PostsRemoteDataSource _postsRemoteDataSource;
+  final PostsLocalDataSource _postsLocalDataSource;
+  final AuthLocalDataSource _authLocalDataSource;
 
   const PostsRepositoryImpl(
-    this._postsLocalDataSource,
     this._postsRemoteDataSource,
+    this._postsLocalDataSource,
+    this._authLocalDataSource,
   );
 
   @override
-  Future<Either<Failure, Unit>> addPost(Post post) async {
+  Future<Either<Failure, Unit>> addPost({
+    required String text,
+    required File? imageFile,
+  }) async {
     try {
-      await _postsRemoteDataSource.addPost(post.toModel);
+      final userString = _authLocalDataSource.getUser()!;
+      final userJson = jsonDecode(userString) as Map<String, dynamic>;
+      final userModel = UserModel.fromJson(userJson);
+      String? imageUrl;
+      if (imageFile != null) {
+        imageUrl = await _postsRemoteDataSource.uploadImage(imageFile);
+      }
+      await _postsRemoteDataSource.addPost(
+        PostModel(
+          text: text,
+          imageUrl: imageUrl,
+          dateTime: DateTime.now(),
+          publisherName: userModel.name,
+          publisherImage: userModel.imageUrl,
+        ),
+      );
       return right(unit);
     } on AppException catch (appException) {
       return left(returnFailure(appException));

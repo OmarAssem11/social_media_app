@@ -7,7 +7,7 @@ class Post with _$Post {
   const factory Post({
     @Default('') String id,
     required String text,
-    required String imageUrl,
+    String? imageUrl,
     required DateTime dateTime,
     required String publisherName,
     required String publisherImage,

@@ -4,4 +4,5 @@ class Constants {
   static const String usersCollectionPath = 'users';
   static const String postsCollectionPath = 'posts';
   static const String cachedPostsPrefKey = 'cached_posts';
+  static const String postImagesStoragePath = 'post_images/';
 }

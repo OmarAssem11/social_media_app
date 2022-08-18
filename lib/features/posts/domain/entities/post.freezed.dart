@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Post {
   String get id => throw _privateConstructorUsedError;
   String get text => throw _privateConstructorUsedError;
-  String get imageUrl => throw _privateConstructorUsedError;
+  String? get imageUrl => throw _privateConstructorUsedError;
   DateTime get dateTime => throw _privateConstructorUsedError;
   String get publisherName => throw _privateConstructorUsedError;
   String get publisherImage => throw _privateConstructorUsedError;
@@ -34,7 +34,7 @@ abstract class $PostCopyWith<$Res> {
   $Res call(
       {String id,
       String text,
-      String imageUrl,
+      String? imageUrl,
       DateTime dateTime,
       String publisherName,
       String publisherImage});
@@ -69,7 +69,7 @@ class _$PostCopyWithImpl<$Res> implements $PostCopyWith<$Res> {
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       dateTime: dateTime == freezed
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
@@ -94,7 +94,7 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
   $Res call(
       {String id,
       String text,
-      String imageUrl,
+      String? imageUrl,
       DateTime dateTime,
       String publisherName,
       String publisherImage});
@@ -130,7 +130,7 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       dateTime: dateTime == freezed
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
@@ -153,7 +153,7 @@ class _$_Post implements _Post {
   const _$_Post(
       {this.id = '',
       required this.text,
-      required this.imageUrl,
+      this.imageUrl,
       required this.dateTime,
       required this.publisherName,
       required this.publisherImage});
@@ -164,7 +164,7 @@ class _$_Post implements _Post {
   @override
   final String text;
   @override
-  final String imageUrl;
+  final String? imageUrl;
   @override
   final DateTime dateTime;
   @override
@@ -212,7 +212,7 @@ abstract class _Post implements Post {
   const factory _Post(
       {final String id,
       required final String text,
-      required final String imageUrl,
+      final String? imageUrl,
       required final DateTime dateTime,
       required final String publisherName,
       required final String publisherImage}) = _$_Post;
@@ -222,7 +222,7 @@ abstract class _Post implements Post {
   @override
   String get text;
   @override
-  String get imageUrl;
+  String? get imageUrl;
   @override
   DateTime get dateTime;
   @override

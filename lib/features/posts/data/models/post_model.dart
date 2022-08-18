@@ -8,7 +8,7 @@ class PostModel {
   final String id;
   final String text;
   @JsonKey(name: 'image_url')
-  final String imageUrl;
+  final String? imageUrl;
   @TimestampConverter()
   @JsonKey(name: 'date_time')
   final DateTime dateTime;
@@ -18,9 +18,9 @@ class PostModel {
   final String publisherImage;
 
   const PostModel({
-    required this.id,
+    this.id = '',
     required this.text,
-    required this.imageUrl,
+    this.imageUrl,
     required this.dateTime,
     required this.publisherName,
     required this.publisherImage,

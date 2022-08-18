@@ -3,8 +3,7 @@ import 'package:social_media_app/features/auth/domain/entities/register_entity.d
 
 extension RegisterModelMapper on RegisterModel {
   RegisterEntity get fromModel => RegisterEntity(
-        firstName: firstName,
-        lastName: lastName,
+        name: name,
         email: email,
         password: password,
       );

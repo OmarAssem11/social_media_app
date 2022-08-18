@@ -19,8 +19,7 @@ class AuthFirebaseService {
     final uId = userCredential.user!.uid;
     final userModel = UserModel(
       id: uId,
-      firstName: registerModel.firstName,
-      lastName: registerModel.lastName,
+      name: registerModel.name,
       email: registerModel.email,
       password: registerModel.password,
     );

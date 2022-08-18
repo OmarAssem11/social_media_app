@@ -73,7 +73,9 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
   gh.lazySingleton<_i18.PostsLocalDataSource>(
       () => _i19.PostsLocalDataSourceImpl(get<_i9.SharedPreferences>()));
   gh.lazySingleton<_i20.PostsRepository>(() => _i21.PostsRepositoryImpl(
-      get<_i18.PostsLocalDataSource>(), get<_i7.PostsRemoteDataSource>()));
+      get<_i7.PostsRemoteDataSource>(),
+      get<_i18.PostsLocalDataSource>(),
+      get<_i10.AuthLocalDataSource>()));
   gh.lazySingleton<_i22.RegisterUseCase>(
       () => _i22.RegisterUseCase(get<_i12.AuthRepository>()));
   gh.lazySingleton<_i23.AddPostUseCase>(

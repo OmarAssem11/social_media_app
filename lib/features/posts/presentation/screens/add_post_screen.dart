@@ -1,9 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 import 'package:social_media_app/core/presentation/widgets/custom_elevated_button.dart';
 import 'package:social_media_app/core/presentation/widgets/custom_text_form_field.dart';
-import 'package:social_media_app/features/posts/domain/entities/post.dart';
 import 'package:social_media_app/features/posts/presentation/cubit/posts_cubit.dart';
 import 'package:social_media_app/generated/l10n.dart';
 
@@ -16,6 +18,7 @@ class AddPostScreen extends StatefulWidget {
 
 class _AddPostScreenState extends State<AddPostScreen> {
   final bodyController = TextEditingController();
+  File? pickedImage;
   final isLoading = false;
 
   @override
@@ -35,22 +38,47 @@ class _AddPostScreenState extends State<AddPostScreen> {
               maxLines: 4,
             ),
             const SizedBox(height: Sizes.s16),
-            CustomElevatedButton(
-              label: S.current.submit,
-              onPressed: () => BlocProvider.of<PostsCubit>(context).addPost(
-                Post(
-                  text: bodyController.text,
-                  imageUrl: '',
-                  dateTime: DateTime.now(),
-                  publisherName: '',
-                  publisherImage: '',
+            Row(
+              children: [
+                Expanded(
+                  flex: 8,
+                  child: CustomElevatedButton(
+                    label: S.current.submit,
+                    onPressed: () =>
+                        BlocProvider.of<PostsCubit>(context).addPost(
+                      text: bodyController.text,
+                      imageFile: pickedImage,
+                    ),
+                    isLoading: isLoading,
+                  ),
                 ),
-              ),
-              isLoading: isLoading,
+                Expanded(
+                  flex: 2,
+                  child: IconButton(
+                    onPressed: () async => pickedImage = await _getImage(),
+                    icon: const Icon(Icons.photo),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
       ),
     );
+  }
+
+  Future<File?> _getImage() async {
+    final pickedFile =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      return File(pickedFile.path);
+    }
+    return null;
+  }
+
+  @override
+  void dispose() {
+    bodyController.dispose();
+    super.dispose();
   }
 }

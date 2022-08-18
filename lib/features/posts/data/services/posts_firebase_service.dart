@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/constants/constants.dart';
 import 'package:social_media_app/features/posts/data/models/post_model.dart';
@@ -28,4 +31,12 @@ class PostsFirebaseService {
 
   Future<void> deletePost(String postId) =>
       postsCollection.doc(postId).delete();
+
+  Future<String> uploadImage(File imageFile) async {
+    final path =
+        '${Constants.postImagesStoragePath}${Uri.file(imageFile.path).pathSegments.last}';
+    final taskSnapshot =
+        await FirebaseStorage.instance.ref().child(path).putFile(imageFile);
+    return taskSnapshot.ref.getDownloadURL();
+  }
 }

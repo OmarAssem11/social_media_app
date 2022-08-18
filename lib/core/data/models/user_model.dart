@@ -5,17 +5,17 @@ part 'user_model.g.dart';
 @JsonSerializable()
 class UserModel {
   final String id;
-  final String firstName;
-  final String lastName;
+  final String name;
   final String email;
   final String password;
+  final String imageUrl;
 
   const UserModel({
     required this.id,
-    required this.firstName,
-    required this.lastName,
+    required this.name,
     required this.email,
     required this.password,
+    this.imageUrl = '',
   });
 
   Map<String, dynamic> toJson() => _$UserModelToJson(this);

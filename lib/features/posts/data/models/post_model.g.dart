@@ -7,9 +7,9 @@ part of 'post_model.dart';
 // **************************************************************************
 
 PostModel _$PostModelFromJson(Map<String, dynamic> json) => PostModel(
-      id: json['id'] as String,
+      id: json['id'] as String? ?? '',
       text: json['text'] as String,
-      imageUrl: json['image_url'] as String,
+      imageUrl: json['image_url'] as String?,
       dateTime:
           const TimestampConverter().fromJson(json['date_time'] as Timestamp),
       publisherName: json['publisher_name'] as String,

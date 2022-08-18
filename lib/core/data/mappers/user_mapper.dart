@@ -4,9 +4,9 @@ import 'package:social_media_app/core/domain/entities/user.dart';
 extension UserMapper on User {
   UserModel get toModel => UserModel(
         id: id,
-        firstName: firstName,
-        lastName: lastName,
+        name: name,
         email: email,
         password: password,
+        imageUrl: imageUrl,
       );
 }

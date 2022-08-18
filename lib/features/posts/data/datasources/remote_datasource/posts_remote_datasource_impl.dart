@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/exceptions/return_app_exception.dart';
 import 'package:social_media_app/features/posts/data/datasources/remote_datasource/posts_remote_datasource.dart';
@@ -41,6 +43,15 @@ class PostsRemoteDataSourceImpl implements PostsRemoteDataSource {
   Future<void> deletePost(String postId) {
     try {
       return _postsFirebaseService.deletePost(postId);
+    } catch (exception) {
+      throw returnRemoteAppException(exception);
+    }
+  }
+
+  @override
+  Future<String> uploadImage(File imageFile) {
+    try {
+      return _postsFirebaseService.uploadImage(imageFile);
     } catch (exception) {
       throw returnRemoteAppException(exception);
     }

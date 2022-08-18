@@ -21,8 +21,7 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _firstNameController = TextEditingController();
-  final _lastNameController = TextEditingController();
+  final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   late TextTheme _textTheme;
@@ -50,34 +49,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: _textTheme.headline4,
               ),
               const SizedBox(height: Sizes.s8),
-              Row(
-                children: [
-                  Expanded(
-                    child: CustomTextFormField(
-                      controller: _firstNameController,
-                      hintText: S.current.firstName,
-                      prefixIcon: Icons.person_outline,
-                      keyboardType: TextInputType.name,
-                      validator: (firstName) => generalValidator(
-                        value: firstName,
-                        fieldName: S.current.firstName,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: Sizes.s8),
-                  Expanded(
-                    child: CustomTextFormField(
-                      controller: _lastNameController,
-                      hintText: S.current.lastName,
-                      prefixIcon: Icons.person_outline,
-                      keyboardType: TextInputType.name,
-                      validator: (lastName) => generalValidator(
-                        value: lastName,
-                        fieldName: S.current.lastName,
-                      ),
-                    ),
-                  ),
-                ],
+              CustomTextFormField(
+                controller: _nameController,
+                hintText: S.current.firstName,
+                prefixIcon: Icons.person_outline,
+                keyboardType: TextInputType.name,
+                validator: (firstName) => generalValidator(
+                  value: firstName,
+                  fieldName: S.current.firstName,
+                ),
               ),
               CustomTextFormField(
                 controller: _emailController,
@@ -107,8 +87,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       if (_formKey.currentState!.validate()) {
                         BlocProvider.of<AuthCubit>(context).register(
                           RegisterEntity(
-                            firstName: _firstNameController.text,
-                            lastName: _firstNameController.text,
+                            name: _nameController.text,
                             email: _emailController.text,
                             password: _passwordController.text,
                           ),
@@ -143,7 +122,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   void dispose() {
-    _firstNameController.dispose();
+    _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
