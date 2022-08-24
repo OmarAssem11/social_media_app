@@ -160,6 +160,16 @@ class S {
     );
   }
 
+  /// `Full name`
+  String get fullName {
+    return Intl.message(
+      'Full name',
+      name: 'fullName',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Already have an account?`
   String get alreadyHaveAnAccount {
     return Intl.message(
@@ -275,6 +285,56 @@ class S {
     return Intl.message(
       'What\'s on your mind?',
       name: 'whatIsOnYourMind',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `h`
+  String get h {
+    return Intl.message(
+      'h',
+      name: 'h',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `d`
+  String get d {
+    return Intl.message(
+      'd',
+      name: 'd',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `w`
+  String get w {
+    return Intl.message(
+      'w',
+      name: 'w',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `m`
+  String get m {
+    return Intl.message(
+      'm',
+      name: 'm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `y`
+  String get y {
+    return Intl.message(
+      'y',
+      name: 'y',
       desc: '',
       args: [],
     );

@@ -48,11 +48,11 @@ ThemeData getLightTheme() => ThemeData(
           fontSize: FontSizeManager.s22,
         ),
         bodyLarge: getSemiBoldTextStyle(
-          color: ColorManager.darkGrey,
+          color: ColorManager.black,
           fontSize: FontSizeManager.s16,
         ),
         bodyMedium: getMediumTextStyle(
-          color: ColorManager.lightGrey,
+          color: ColorManager.black,
           fontSize: FontSizeManager.s14,
         ),
         bodySmall: getRegularTextStyle(

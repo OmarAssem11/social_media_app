@@ -51,12 +51,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
               const SizedBox(height: Sizes.s8),
               CustomTextFormField(
                 controller: _nameController,
-                hintText: S.current.firstName,
+                hintText: S.current.fullName,
                 prefixIcon: Icons.person_outline,
                 keyboardType: TextInputType.name,
-                validator: (firstName) => generalValidator(
-                  value: firstName,
-                  fieldName: S.current.firstName,
+                validator: (name) => generalValidator(
+                  value: name,
+                  fieldName: S.current.fullName,
                 ),
               ),
               CustomTextFormField(

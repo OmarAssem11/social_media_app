@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا يمكن ان يكون فارغ"),
         "checkYourEmail":
             MessageLookupByLibrary.simpleMessage("تفقد بريدك الإكتروني"),
+        "d": MessageLookupByLibrary.simpleMessage("ي"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "emailAddress":
@@ -39,10 +40,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "firstName": MessageLookupByLibrary.simpleMessage("الأسم الأول"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
+        "fullName": MessageLookupByLibrary.simpleMessage("الأسم بالكامل"),
+        "h": MessageLookupByLibrary.simpleMessage("س"),
         "invalidEmailFormat":
             MessageLookupByLibrary.simpleMessage("صيغة الريد الإكتروني خاطئة"),
         "lastName": MessageLookupByLibrary.simpleMessage("أسم العائلة"),
         "login": MessageLookupByLibrary.simpleMessage("نسجيل دخول"),
+        "m": MessageLookupByLibrary.simpleMessage("ش"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "noPageFound": MessageLookupByLibrary.simpleMessage("!لا يوجد صفحة"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة السر"),
@@ -55,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("السابق"),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage("!حدث خطأ"),
         "submit": MessageLookupByLibrary.simpleMessage("تأكيد"),
-        "whatIsOnYourMind": MessageLookupByLibrary.simpleMessage("بم تفكر؟")
+        "w": MessageLookupByLibrary.simpleMessage("أ"),
+        "whatIsOnYourMind": MessageLookupByLibrary.simpleMessage("بم تفكر؟"),
+        "y": MessageLookupByLibrary.simpleMessage("ع")
       };
 }

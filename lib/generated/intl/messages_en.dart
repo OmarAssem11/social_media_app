@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Can\'t be empty"),
         "checkYourEmail":
             MessageLookupByLibrary.simpleMessage("Check your email"),
+        "d": MessageLookupByLibrary.simpleMessage("d"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
@@ -38,10 +39,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "firstName": MessageLookupByLibrary.simpleMessage("First name"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "fullName": MessageLookupByLibrary.simpleMessage("Full name"),
+        "h": MessageLookupByLibrary.simpleMessage("h"),
         "invalidEmailFormat":
             MessageLookupByLibrary.simpleMessage("Invalid email format"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "m": MessageLookupByLibrary.simpleMessage("m"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noPageFound": MessageLookupByLibrary.simpleMessage("No page found!"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -54,7 +58,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "somethingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong!"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
+        "w": MessageLookupByLibrary.simpleMessage("w"),
         "whatIsOnYourMind":
-            MessageLookupByLibrary.simpleMessage("What\'s on your mind?")
+            MessageLookupByLibrary.simpleMessage("What\'s on your mind?"),
+        "y": MessageLookupByLibrary.simpleMessage("y")
       };
 }

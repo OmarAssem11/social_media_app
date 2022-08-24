@@ -17,7 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Post {
   String get id => throw _privateConstructorUsedError;
-  String get text => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
   String? get imageUrl => throw _privateConstructorUsedError;
   DateTime get dateTime => throw _privateConstructorUsedError;
   String get publisherName => throw _privateConstructorUsedError;
@@ -33,7 +33,7 @@ abstract class $PostCopyWith<$Res> {
       _$PostCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      String text,
+      String? text,
       String? imageUrl,
       DateTime dateTime,
       String publisherName,
@@ -65,7 +65,7 @@ class _$PostCopyWithImpl<$Res> implements $PostCopyWith<$Res> {
       text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -93,7 +93,7 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      String text,
+      String? text,
       String? imageUrl,
       DateTime dateTime,
       String publisherName,
@@ -126,7 +126,7 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
       text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -152,7 +152,7 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
 class _$_Post implements _Post {
   const _$_Post(
       {this.id = '',
-      required this.text,
+      this.text,
       this.imageUrl,
       required this.dateTime,
       required this.publisherName,
@@ -162,7 +162,7 @@ class _$_Post implements _Post {
   @JsonKey()
   final String id;
   @override
-  final String text;
+  final String? text;
   @override
   final String? imageUrl;
   @override
@@ -211,7 +211,7 @@ class _$_Post implements _Post {
 abstract class _Post implements Post {
   const factory _Post(
       {final String id,
-      required final String text,
+      final String? text,
       final String? imageUrl,
       required final DateTime dateTime,
       required final String publisherName,
@@ -220,7 +220,7 @@ abstract class _Post implements Post {
   @override
   String get id;
   @override
-  String get text;
+  String? get text;
   @override
   String? get imageUrl;
   @override

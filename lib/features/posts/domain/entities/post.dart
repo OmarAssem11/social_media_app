@@ -6,7 +6,7 @@ part 'post.freezed.dart';
 class Post with _$Post {
   const factory Post({
     @Default('') String id,
-    required String text,
+    String? text,
     String? imageUrl,
     required DateTime dateTime,
     required String publisherName,

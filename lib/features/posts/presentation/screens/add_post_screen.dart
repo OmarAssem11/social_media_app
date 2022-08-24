@@ -7,6 +7,7 @@ import 'package:social_media_app/core/presentation/resources/values_manager.dart
 import 'package:social_media_app/core/presentation/widgets/custom_elevated_button.dart';
 import 'package:social_media_app/core/presentation/widgets/custom_text_form_field.dart';
 import 'package:social_media_app/features/posts/presentation/cubit/posts_cubit.dart';
+import 'package:social_media_app/features/posts/presentation/cubit/posts_state.dart';
 import 'package:social_media_app/generated/l10n.dart';
 
 class AddPostScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class AddPostScreen extends StatefulWidget {
 class _AddPostScreenState extends State<AddPostScreen> {
   final bodyController = TextEditingController();
   File? pickedImage;
-  final isLoading = false;
+  bool isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,14 +43,24 @@ class _AddPostScreenState extends State<AddPostScreen> {
               children: [
                 Expanded(
                   flex: 8,
-                  child: CustomElevatedButton(
-                    label: S.current.submit,
-                    onPressed: () =>
-                        BlocProvider.of<PostsCubit>(context).addPost(
-                      text: bodyController.text,
-                      imageFile: pickedImage,
-                    ),
-                    isLoading: isLoading,
+                  child: BlocConsumer<PostsCubit, PostsState>(
+                    listener: (context, state) {
+                      state.mapOrNull(
+                        loading: (_) => isLoading = true,
+                        success: (_) => Navigator.of(context).pop(),
+                      );
+                    },
+                    builder: (context, state) {
+                      return CustomElevatedButton(
+                        label: S.current.submit,
+                        onPressed: () =>
+                            BlocProvider.of<PostsCubit>(context).addPost(
+                          text: bodyController.text,
+                          imageFile: pickedImage,
+                        ),
+                        isLoading: isLoading,
+                      );
+                    },
                   ),
                 ),
                 Expanded(

@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'post_model.g.dart';
@@ -6,10 +5,10 @@ part 'post_model.g.dart';
 @JsonSerializable()
 class PostModel {
   final String id;
-  final String text;
+  final String? text;
   @JsonKey(name: 'image_url')
   final String? imageUrl;
-  @TimestampConverter()
+  @DateTimeConverter()
   @JsonKey(name: 'date_time')
   final DateTime dateTime;
   @JsonKey(name: 'publisher_name')
@@ -19,7 +18,7 @@ class PostModel {
 
   const PostModel({
     this.id = '',
-    required this.text,
+    this.text,
     this.imageUrl,
     required this.dateTime,
     required this.publisherName,
@@ -32,12 +31,13 @@ class PostModel {
       _$PostModelFromJson(json);
 }
 
-class TimestampConverter implements JsonConverter<DateTime, Timestamp> {
-  const TimestampConverter();
+class DateTimeConverter implements JsonConverter<DateTime, int> {
+  const DateTimeConverter();
 
   @override
-  Timestamp toJson(DateTime date) => Timestamp.fromDate(date);
+  int toJson(DateTime date) => date.millisecondsSinceEpoch;
 
   @override
-  DateTime fromJson(Timestamp timestamp) => timestamp.toDate();
+  DateTime fromJson(int milliseconds) =>
+      DateTime.fromMillisecondsSinceEpoch(milliseconds);
 }

@@ -10,6 +10,7 @@
     "password": "Password",
     "firstName": "First name",
     "lastName": "Last name",
+    "fullName": "Full name",
     "alreadyHaveAnAccount": "Already have an account?",
     "doNotHaveAnAccount": "Don't have an account?",
     "forgotPassword": "Forgot password?",
@@ -21,5 +22,10 @@
     "checkYourEmail": "Check your email",
     "resetPassword": "Reset password",
     "addPost": "Add post",
-    "whatIsOnYourMind": "What's on your mind?"
+    "whatIsOnYourMind": "What's on your mind?",
+    "h": "h",
+    "d": "d",
+    "w": "w",
+    "m": "m",
+    "y": "y"
 }
