@@ -3,13 +3,13 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:injectable/injectable.dart';
-import 'package:social_media_app/core/data/constants/constants.dart';
+import 'package:social_media_app/core/data/constants/firebase_path.dart';
 import 'package:social_media_app/features/posts/data/models/post_model.dart';
 
 @lazySingleton
 class PostsFirebaseService {
   final postsCollection =
-      FirebaseFirestore.instance.collection(Constants.postsCollectionPath);
+      FirebaseFirestore.instance.collection(FirebasePath.posts);
 
   Future<void> addPost(PostModel postModel) =>
       postsCollection.doc().set(postModel.toJson());
@@ -34,7 +34,7 @@ class PostsFirebaseService {
 
   Future<String> uploadImage(File imageFile) async {
     final path =
-        '${Constants.postImagesStoragePath}${Uri.file(imageFile.path).pathSegments.last}';
+        '${FirebasePath.postImages}${Uri.file(imageFile.path).pathSegments.last}';
     final taskSnapshot =
         await FirebaseStorage.instance.ref().child(path).putFile(imageFile);
     return taskSnapshot.ref.getDownloadURL();

@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
-import 'package:social_media_app/core/data/constants/constants.dart';
+import 'package:social_media_app/core/data/constants/key_constants.dart';
+import 'package:social_media_app/core/data/constants/firebase_path.dart';
 import 'package:social_media_app/core/data/models/user_model.dart';
 import 'package:social_media_app/features/auth/data/models/login_model/login_model.dart';
 import 'package:social_media_app/features/auth/data/models/register_model/register_model.dart';
@@ -24,7 +25,7 @@ class AuthFirebaseService {
       password: registerModel.password,
     );
     await FirebaseFirestore.instance
-        .collection(Constants.usersCollectionPath)
+        .collection(FirebasePath.users)
         .doc(uId)
         .set(userModel.toJson());
     return userModel;
@@ -38,7 +39,7 @@ class AuthFirebaseService {
     );
     final uId = userCredential.user!.uid;
     final documentSnapShot = await FirebaseFirestore.instance
-        .collection(Constants.usersCollectionPath)
+        .collection(FirebasePath.users)
         .doc(uId)
         .get();
     final userModel = UserModel.fromJson(documentSnapShot.data()!);
