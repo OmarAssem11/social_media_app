@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appName": MessageLookupByLibrary.simpleMessage("Hashtag"),
         "canNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Can\'t be empty"),
+        "chats": MessageLookupByLibrary.simpleMessage("Chats"),
         "checkYourEmail":
             MessageLookupByLibrary.simpleMessage("Check your email"),
         "d": MessageLookupByLibrary.simpleMessage("d"),
@@ -41,10 +42,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full name"),
         "h": MessageLookupByLibrary.simpleMessage("h"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "invalidEmailFormat":
             MessageLookupByLibrary.simpleMessage("Invalid email format"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "m": MessageLookupByLibrary.simpleMessage("m"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noPageFound": MessageLookupByLibrary.simpleMessage("No page found!"),
@@ -54,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Password can\'t be less than eight characters"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "somethingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong!"),

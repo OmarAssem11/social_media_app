@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appName": MessageLookupByLibrary.simpleMessage("هاشتاج"),
         "canNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("لا يمكن ان يكون فارغ"),
+        "chats": MessageLookupByLibrary.simpleMessage("المحادثات"),
         "checkYourEmail":
             MessageLookupByLibrary.simpleMessage("تفقد بريدك الإكتروني"),
         "d": MessageLookupByLibrary.simpleMessage("ي"),
@@ -42,10 +43,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
         "fullName": MessageLookupByLibrary.simpleMessage("الأسم بالكامل"),
         "h": MessageLookupByLibrary.simpleMessage("س"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "invalidEmailFormat":
             MessageLookupByLibrary.simpleMessage("صيغة الريد الإكتروني خاطئة"),
         "lastName": MessageLookupByLibrary.simpleMessage("أسم العائلة"),
         "login": MessageLookupByLibrary.simpleMessage("نسجيل دخول"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "m": MessageLookupByLibrary.simpleMessage("ش"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "noPageFound": MessageLookupByLibrary.simpleMessage("!لا يوجد صفحة"),
@@ -56,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة ضبط كلمة السر"),
+        "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "skip": MessageLookupByLibrary.simpleMessage("السابق"),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage("!حدث خطأ"),
         "submit": MessageLookupByLibrary.simpleMessage("تأكيد"),

@@ -27,5 +27,9 @@
     "d": "d",
     "w": "w",
     "m": "m",
-    "y": "y"
+    "y": "y",
+    "home": "Home",
+    "chats": "Chats",
+    "settings": "Settings",
+    "logout": "Logout"
 }

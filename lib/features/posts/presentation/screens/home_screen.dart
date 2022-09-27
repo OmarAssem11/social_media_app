@@ -5,6 +5,7 @@ import 'package:social_media_app/core/presentation/widgets/error_indicator.dart'
 import 'package:social_media_app/core/presentation/widgets/loading_indicator.dart';
 import 'package:social_media_app/features/posts/presentation/cubit/posts_cubit.dart';
 import 'package:social_media_app/features/posts/presentation/cubit/posts_state.dart';
+import 'package:social_media_app/features/posts/presentation/widgets/home_drawer.dart';
 import 'package:social_media_app/features/posts/presentation/widgets/post_item.dart';
 import 'package:social_media_app/generated/l10n.dart';
 
@@ -34,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+      drawer: const HomeDrawer(),
       body: BlocBuilder<PostsCubit, PostsState>(
         builder: (context, state) {
           return state.maybeWhen(
