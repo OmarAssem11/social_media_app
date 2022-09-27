@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "appName": MessageLookupByLibrary.simpleMessage("Hashtag"),
+        "areYouSureYouWantToLogout": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to logout?"),
         "canNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Can\'t be empty"),
         "chats": MessageLookupByLibrary.simpleMessage("Chats"),
@@ -50,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "m": MessageLookupByLibrary.simpleMessage("m"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "noPageFound": MessageLookupByLibrary.simpleMessage("No page found!"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordCanNotBeLessThanEightCharacters":
@@ -65,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "w": MessageLookupByLibrary.simpleMessage("w"),
         "whatIsOnYourMind":
             MessageLookupByLibrary.simpleMessage("What\'s on your mind?"),
-        "y": MessageLookupByLibrary.simpleMessage("y")
+        "y": MessageLookupByLibrary.simpleMessage("y"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

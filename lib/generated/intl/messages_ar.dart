@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب؟"),
         "appName": MessageLookupByLibrary.simpleMessage("هاشتاج"),
+        "areYouSureYouWantToLogout": MessageLookupByLibrary.simpleMessage(
+            "هل أنت متأكد انك تريد تسجيل خروج؟"),
         "canNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("لا يمكن ان يكون فارغ"),
         "chats": MessageLookupByLibrary.simpleMessage("المحادثات"),
@@ -51,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "m": MessageLookupByLibrary.simpleMessage("ش"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "noPageFound": MessageLookupByLibrary.simpleMessage("!لا يوجد صفحة"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة السر"),
         "passwordCanNotBeLessThanEightCharacters":
@@ -65,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "submit": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "w": MessageLookupByLibrary.simpleMessage("أ"),
         "whatIsOnYourMind": MessageLookupByLibrary.simpleMessage("بم تفكر؟"),
-        "y": MessageLookupByLibrary.simpleMessage("ع")
+        "y": MessageLookupByLibrary.simpleMessage("ع"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

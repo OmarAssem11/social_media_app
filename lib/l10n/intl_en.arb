@@ -31,5 +31,8 @@
     "home": "Home",
     "chats": "Chats",
     "settings": "Settings",
-    "logout": "Logout"
+    "logout": "Logout",
+    "areYouSureYouWantToLogout": "Are you sure you want to logout?",
+    "yes": "Yes",
+    "no": "No"
 }

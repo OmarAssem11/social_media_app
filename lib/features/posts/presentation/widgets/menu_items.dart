@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:social_media_app/di/injector.dart';
+import 'package:social_media_app/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:social_media_app/features/posts/presentation/widgets/logout_alert.dart';
 import 'package:social_media_app/generated/l10n.dart';
 
 class MenuItems extends StatelessWidget {
@@ -11,7 +15,7 @@ class MenuItems extends StatelessWidget {
         ListTile(
           leading: const Icon(Icons.home_outlined),
           title: Text(S.current.home),
-          onTap: () {},
+          onTap: () => Navigator.of(context).pop(),
         ),
         ListTile(
           leading: const Icon(Icons.chat_outlined),
@@ -26,7 +30,13 @@ class MenuItems extends StatelessWidget {
         ListTile(
           leading: const Icon(Icons.logout_outlined),
           title: Text(S.current.logout),
-          onTap: () {},
+          onTap: () => showDialog(
+            context: context,
+            builder: (_) => BlocProvider(
+              create: (_) => getIt<AuthCubit>(),
+              child: const LogoutAlertDialog(),
+            ),
+          ),
         ),
       ],
     );
