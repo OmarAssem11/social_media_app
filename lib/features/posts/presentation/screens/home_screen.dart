@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: (_, index) => PostItem(posts[index]),
               itemCount: posts.length,
             ),
-            orElse: () => const SizedBox(),
+            orElse: () => const SizedBox.shrink(),
           );
         },
       ),

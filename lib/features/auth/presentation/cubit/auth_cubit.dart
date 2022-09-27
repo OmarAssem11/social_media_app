@@ -4,6 +4,7 @@ import 'package:social_media_app/core/domain/params/no_params.dart';
 import 'package:social_media_app/features/auth/domain/entities/login_entity.dart';
 import 'package:social_media_app/features/auth/domain/entities/register_entity.dart';
 import 'package:social_media_app/features/auth/domain/usecases/forgot_password_usecase.dart';
+import 'package:social_media_app/features/auth/domain/usecases/get_current_user_usecase.dart';
 import 'package:social_media_app/features/auth/domain/usecases/is_logged_in_usecase.dart';
 import 'package:social_media_app/features/auth/domain/usecases/login_usecase.dart';
 import 'package:social_media_app/features/auth/domain/usecases/logout_usecase.dart';
@@ -18,6 +19,7 @@ class AuthCubit extends Cubit<AuthState> {
     this._logoutUseCase,
     this._forgotPasswordUseCase,
     this._isLoggedInUseCase,
+    this._getCurrentUserUseCase,
   ) : super(const AuthInitial());
 
   final RegisterUseCase _registerUseCase;
@@ -25,6 +27,7 @@ class AuthCubit extends Cubit<AuthState> {
   final LogoutUseCase _logoutUseCase;
   final ForgotPasswordUseCase _forgotPasswordUseCase;
   final IsLoggedInUseCase _isLoggedInUseCase;
+  final GetCurrentUserUseCase _getCurrentUserUseCase;
 
   Future<void> register(RegisterEntity registerEntity) async {
     emit(const AuthLoading());
@@ -81,6 +84,17 @@ class AuthCubit extends Cubit<AuthState> {
         (isLoggedIn) {
           return isLoggedIn ? const IsLoggedIn() : const NotLoggedIn();
         },
+      ),
+    );
+  }
+
+  Future<void> getCurrentUser() async {
+    emit(const AuthLoading());
+    final result = await _getCurrentUserUseCase(const NoParams());
+    emit(
+      result.fold(
+        (failure) => const AuthError(),
+        (user) => CurrentUser(user),
       ),
     );
   }

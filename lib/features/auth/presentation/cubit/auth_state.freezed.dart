@@ -24,6 +24,7 @@ mixin _$AuthState {
     required TResult Function() error,
     required TResult Function() loggedIn,
     required TResult Function() notLoggedIn,
+    required TResult Function(User user) currentUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +35,7 @@ mixin _$AuthState {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +46,7 @@ mixin _$AuthState {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +58,7 @@ mixin _$AuthState {
     required TResult Function(AuthError value) error,
     required TResult Function(IsLoggedIn value) loggedIn,
     required TResult Function(NotLoggedIn value) notLoggedIn,
+    required TResult Function(CurrentUser value) currentUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +69,7 @@ mixin _$AuthState {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +80,7 @@ mixin _$AuthState {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -141,6 +147,7 @@ class _$AuthInitial implements AuthInitial {
     required TResult Function() error,
     required TResult Function() loggedIn,
     required TResult Function() notLoggedIn,
+    required TResult Function(User user) currentUser,
   }) {
     return initial();
   }
@@ -154,6 +161,7 @@ class _$AuthInitial implements AuthInitial {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
   }) {
     return initial?.call();
   }
@@ -167,6 +175,7 @@ class _$AuthInitial implements AuthInitial {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -184,6 +193,7 @@ class _$AuthInitial implements AuthInitial {
     required TResult Function(AuthError value) error,
     required TResult Function(IsLoggedIn value) loggedIn,
     required TResult Function(NotLoggedIn value) notLoggedIn,
+    required TResult Function(CurrentUser value) currentUser,
   }) {
     return initial(this);
   }
@@ -197,6 +207,7 @@ class _$AuthInitial implements AuthInitial {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
   }) {
     return initial?.call(this);
   }
@@ -210,6 +221,7 @@ class _$AuthInitial implements AuthInitial {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -269,6 +281,7 @@ class _$AuthLoading implements AuthLoading {
     required TResult Function() error,
     required TResult Function() loggedIn,
     required TResult Function() notLoggedIn,
+    required TResult Function(User user) currentUser,
   }) {
     return loading();
   }
@@ -282,6 +295,7 @@ class _$AuthLoading implements AuthLoading {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
   }) {
     return loading?.call();
   }
@@ -295,6 +309,7 @@ class _$AuthLoading implements AuthLoading {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -312,6 +327,7 @@ class _$AuthLoading implements AuthLoading {
     required TResult Function(AuthError value) error,
     required TResult Function(IsLoggedIn value) loggedIn,
     required TResult Function(NotLoggedIn value) notLoggedIn,
+    required TResult Function(CurrentUser value) currentUser,
   }) {
     return loading(this);
   }
@@ -325,6 +341,7 @@ class _$AuthLoading implements AuthLoading {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
   }) {
     return loading?.call(this);
   }
@@ -338,6 +355,7 @@ class _$AuthLoading implements AuthLoading {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -397,6 +415,7 @@ class _$AuthSuccess implements AuthSuccess {
     required TResult Function() error,
     required TResult Function() loggedIn,
     required TResult Function() notLoggedIn,
+    required TResult Function(User user) currentUser,
   }) {
     return success();
   }
@@ -410,6 +429,7 @@ class _$AuthSuccess implements AuthSuccess {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
   }) {
     return success?.call();
   }
@@ -423,6 +443,7 @@ class _$AuthSuccess implements AuthSuccess {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -440,6 +461,7 @@ class _$AuthSuccess implements AuthSuccess {
     required TResult Function(AuthError value) error,
     required TResult Function(IsLoggedIn value) loggedIn,
     required TResult Function(NotLoggedIn value) notLoggedIn,
+    required TResult Function(CurrentUser value) currentUser,
   }) {
     return success(this);
   }
@@ -453,6 +475,7 @@ class _$AuthSuccess implements AuthSuccess {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
   }) {
     return success?.call(this);
   }
@@ -466,6 +489,7 @@ class _$AuthSuccess implements AuthSuccess {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -525,6 +549,7 @@ class _$AuthError implements AuthError {
     required TResult Function() error,
     required TResult Function() loggedIn,
     required TResult Function() notLoggedIn,
+    required TResult Function(User user) currentUser,
   }) {
     return error();
   }
@@ -538,6 +563,7 @@ class _$AuthError implements AuthError {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
   }) {
     return error?.call();
   }
@@ -551,6 +577,7 @@ class _$AuthError implements AuthError {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -568,6 +595,7 @@ class _$AuthError implements AuthError {
     required TResult Function(AuthError value) error,
     required TResult Function(IsLoggedIn value) loggedIn,
     required TResult Function(NotLoggedIn value) notLoggedIn,
+    required TResult Function(CurrentUser value) currentUser,
   }) {
     return error(this);
   }
@@ -581,6 +609,7 @@ class _$AuthError implements AuthError {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
   }) {
     return error?.call(this);
   }
@@ -594,6 +623,7 @@ class _$AuthError implements AuthError {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -653,6 +683,7 @@ class _$IsLoggedIn implements IsLoggedIn {
     required TResult Function() error,
     required TResult Function() loggedIn,
     required TResult Function() notLoggedIn,
+    required TResult Function(User user) currentUser,
   }) {
     return loggedIn();
   }
@@ -666,6 +697,7 @@ class _$IsLoggedIn implements IsLoggedIn {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
   }) {
     return loggedIn?.call();
   }
@@ -679,6 +711,7 @@ class _$IsLoggedIn implements IsLoggedIn {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
     required TResult orElse(),
   }) {
     if (loggedIn != null) {
@@ -696,6 +729,7 @@ class _$IsLoggedIn implements IsLoggedIn {
     required TResult Function(AuthError value) error,
     required TResult Function(IsLoggedIn value) loggedIn,
     required TResult Function(NotLoggedIn value) notLoggedIn,
+    required TResult Function(CurrentUser value) currentUser,
   }) {
     return loggedIn(this);
   }
@@ -709,6 +743,7 @@ class _$IsLoggedIn implements IsLoggedIn {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
   }) {
     return loggedIn?.call(this);
   }
@@ -722,6 +757,7 @@ class _$IsLoggedIn implements IsLoggedIn {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
     required TResult orElse(),
   }) {
     if (loggedIn != null) {
@@ -781,6 +817,7 @@ class _$NotLoggedIn implements NotLoggedIn {
     required TResult Function() error,
     required TResult Function() loggedIn,
     required TResult Function() notLoggedIn,
+    required TResult Function(User user) currentUser,
   }) {
     return notLoggedIn();
   }
@@ -794,6 +831,7 @@ class _$NotLoggedIn implements NotLoggedIn {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
   }) {
     return notLoggedIn?.call();
   }
@@ -807,6 +845,7 @@ class _$NotLoggedIn implements NotLoggedIn {
     TResult Function()? error,
     TResult Function()? loggedIn,
     TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
     required TResult orElse(),
   }) {
     if (notLoggedIn != null) {
@@ -824,6 +863,7 @@ class _$NotLoggedIn implements NotLoggedIn {
     required TResult Function(AuthError value) error,
     required TResult Function(IsLoggedIn value) loggedIn,
     required TResult Function(NotLoggedIn value) notLoggedIn,
+    required TResult Function(CurrentUser value) currentUser,
   }) {
     return notLoggedIn(this);
   }
@@ -837,6 +877,7 @@ class _$NotLoggedIn implements NotLoggedIn {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
   }) {
     return notLoggedIn?.call(this);
   }
@@ -850,6 +891,7 @@ class _$NotLoggedIn implements NotLoggedIn {
     TResult Function(AuthError value)? error,
     TResult Function(IsLoggedIn value)? loggedIn,
     TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
     required TResult orElse(),
   }) {
     if (notLoggedIn != null) {
@@ -861,4 +903,176 @@ class _$NotLoggedIn implements NotLoggedIn {
 
 abstract class NotLoggedIn implements AuthState {
   const factory NotLoggedIn() = _$NotLoggedIn;
+}
+
+/// @nodoc
+abstract class _$$CurrentUserCopyWith<$Res> {
+  factory _$$CurrentUserCopyWith(
+          _$CurrentUser value, $Res Function(_$CurrentUser) then) =
+      __$$CurrentUserCopyWithImpl<$Res>;
+  $Res call({User user});
+
+  $UserCopyWith<$Res> get user;
+}
+
+/// @nodoc
+class __$$CurrentUserCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
+    implements _$$CurrentUserCopyWith<$Res> {
+  __$$CurrentUserCopyWithImpl(
+      _$CurrentUser _value, $Res Function(_$CurrentUser) _then)
+      : super(_value, (v) => _then(v as _$CurrentUser));
+
+  @override
+  _$CurrentUser get _value => super._value as _$CurrentUser;
+
+  @override
+  $Res call({
+    Object? user = freezed,
+  }) {
+    return _then(_$CurrentUser(
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
+    ));
+  }
+
+  @override
+  $UserCopyWith<$Res> get user {
+    return $UserCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$CurrentUser implements CurrentUser {
+  const _$CurrentUser(this.user);
+
+  @override
+  final User user;
+
+  @override
+  String toString() {
+    return 'AuthState.currentUser(user: $user)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CurrentUser &&
+            const DeepCollectionEquality().equals(other.user, user));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$CurrentUserCopyWith<_$CurrentUser> get copyWith =>
+      __$$CurrentUserCopyWithImpl<_$CurrentUser>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function() error,
+    required TResult Function() loggedIn,
+    required TResult Function() notLoggedIn,
+    required TResult Function(User user) currentUser,
+  }) {
+    return currentUser(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function()? error,
+    TResult Function()? loggedIn,
+    TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
+  }) {
+    return currentUser?.call(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function()? error,
+    TResult Function()? loggedIn,
+    TResult Function()? notLoggedIn,
+    TResult Function(User user)? currentUser,
+    required TResult orElse(),
+  }) {
+    if (currentUser != null) {
+      return currentUser(user);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AuthInitial value) initial,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthError value) error,
+    required TResult Function(IsLoggedIn value) loggedIn,
+    required TResult Function(NotLoggedIn value) notLoggedIn,
+    required TResult Function(CurrentUser value) currentUser,
+  }) {
+    return currentUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AuthInitial value)? initial,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthError value)? error,
+    TResult Function(IsLoggedIn value)? loggedIn,
+    TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
+  }) {
+    return currentUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AuthInitial value)? initial,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthError value)? error,
+    TResult Function(IsLoggedIn value)? loggedIn,
+    TResult Function(NotLoggedIn value)? notLoggedIn,
+    TResult Function(CurrentUser value)? currentUser,
+    required TResult orElse(),
+  }) {
+    if (currentUser != null) {
+      return currentUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CurrentUser implements AuthState {
+  const factory CurrentUser(final User user) = _$CurrentUser;
+
+  User get user;
+  @JsonKey(ignore: true)
+  _$$CurrentUserCopyWith<_$CurrentUser> get copyWith =>
+      throw _privateConstructorUsedError;
 }

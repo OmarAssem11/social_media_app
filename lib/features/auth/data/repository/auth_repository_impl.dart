@@ -1,6 +1,11 @@
+import 'dart:convert';
+
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/exceptions/app_exception.dart';
+import 'package:social_media_app/core/data/mappers/user_model_mapper.dart';
+import 'package:social_media_app/core/data/models/user_model.dart';
+import 'package:social_media_app/core/domain/entities/user.dart';
 import 'package:social_media_app/core/domain/failure/failure.dart';
 import 'package:social_media_app/core/domain/failure/return_failure.dart';
 import 'package:social_media_app/features/auth/data/datasources/local_datasource/auth_local_datasource.dart';
@@ -75,6 +80,18 @@ class AuthRepositoryImpl implements AuthRepository {
       } else {
         return right(false);
       }
+    } on AppException catch (appException) {
+      return left(returnFailure(appException));
+    }
+  }
+
+  @override
+  Future<Either<Failure, User>> getCurrentUser() async {
+    try {
+      final prefUser = _authLocalDataSource.getUser()!;
+      final userJson = jsonDecode(prefUser) as Map<String, dynamic>;
+      final user = UserModel.fromJson(userJson);
+      return right(user.fromModel);
     } on AppException catch (appException) {
       return left(returnFailure(appException));
     }
