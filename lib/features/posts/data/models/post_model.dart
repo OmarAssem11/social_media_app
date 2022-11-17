@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:social_media_app/core/data/json_converters/date_time_converter.dart';
 
 part 'post_model.g.dart';
 
@@ -29,15 +30,4 @@ class PostModel {
 
   factory PostModel.fromJson(Map<String, dynamic> json) =>
       _$PostModelFromJson(json);
-}
-
-class DateTimeConverter implements JsonConverter<DateTime, int> {
-  const DateTimeConverter();
-
-  @override
-  int toJson(DateTime date) => date.millisecondsSinceEpoch;
-
-  @override
-  DateTime fromJson(int milliseconds) =>
-      DateTime.fromMillisecondsSinceEpoch(milliseconds);
 }
