@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:social_media_app/core/presentation/resources/routes_manager.dart';
 import 'package:social_media_app/di/injector.dart';
 import 'package:social_media_app/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:social_media_app/features/posts/presentation/widgets/logout_alert.dart';
@@ -25,7 +26,7 @@ class MenuItems extends StatelessWidget {
         ListTile(
           leading: const Icon(Icons.settings_outlined),
           title: Text(S.current.settings),
-          onTap: () {},
+          onTap: () => Navigator.of(context).pushNamed(AppRoutes.settings),
         ),
         ListTile(
           leading: const Icon(Icons.logout_outlined),

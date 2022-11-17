@@ -34,5 +34,8 @@
     "logout": "Logout",
     "areYouSureYouWantToLogout": "Are you sure you want to logout?",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "darkMode": "Dark mode",
+    "english": "English",
+    "arabic": "Arabic"
 }

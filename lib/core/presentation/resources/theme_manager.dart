@@ -35,7 +35,7 @@ ThemeData getLightTheme() => ThemeData(
             color: ColorManager.white,
             fontSize: FontSizeManager.s18,
           ),
-          primary: ColorManager.primary,
+          backgroundColor: ColorManager.primary,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(Sizes.s12)),
           ),
@@ -144,7 +144,7 @@ ThemeData getDarkTheme() => ThemeData(
             color: ColorManager.white,
             fontSize: FontSizeManager.s18,
           ),
-          primary: ColorManager.primary,
+          backgroundColor: ColorManager.primary,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(Sizes.s12)),
           ),

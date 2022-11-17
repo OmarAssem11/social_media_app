@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "appName": MessageLookupByLibrary.simpleMessage("Hashtag"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "areYouSureYouWantToLogout": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to logout?"),
         "canNotBeEmpty":
@@ -34,11 +35,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "checkYourEmail":
             MessageLookupByLibrary.simpleMessage("Check your email"),
         "d": MessageLookupByLibrary.simpleMessage("d"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Dark mode"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
         "emailCanNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Email can\'t be empty"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "firstName": MessageLookupByLibrary.simpleMessage("First name"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),

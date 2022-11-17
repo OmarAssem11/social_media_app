@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'utility_state.dart';
+part of 'settings_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$UtilityState {
+mixin _$SettingsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -81,19 +81,20 @@ mixin _$UtilityState {
 }
 
 /// @nodoc
-abstract class $UtilityStateCopyWith<$Res> {
-  factory $UtilityStateCopyWith(
-          UtilityState value, $Res Function(UtilityState) then) =
-      _$UtilityStateCopyWithImpl<$Res>;
+abstract class $SettingsStateCopyWith<$Res> {
+  factory $SettingsStateCopyWith(
+          SettingsState value, $Res Function(SettingsState) then) =
+      _$SettingsStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UtilityStateCopyWithImpl<$Res> implements $UtilityStateCopyWith<$Res> {
-  _$UtilityStateCopyWithImpl(this._value, this._then);
+class _$SettingsStateCopyWithImpl<$Res>
+    implements $SettingsStateCopyWith<$Res> {
+  _$SettingsStateCopyWithImpl(this._value, this._then);
 
-  final UtilityState _value;
+  final SettingsState _value;
   // ignore: unused_field
-  final $Res Function(UtilityState) _then;
+  final $Res Function(SettingsState) _then;
 }
 
 /// @nodoc
@@ -103,7 +104,7 @@ abstract class _$$InitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$InitialCopyWithImpl<$Res> extends _$UtilityStateCopyWithImpl<$Res>
+class __$$InitialCopyWithImpl<$Res> extends _$SettingsStateCopyWithImpl<$Res>
     implements _$$InitialCopyWith<$Res> {
   __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
       : super(_value, (v) => _then(v as _$Initial));
@@ -119,7 +120,7 @@ class _$Initial implements Initial {
 
   @override
   String toString() {
-    return 'UtilityState.initial()';
+    return 'SettingsState.initial()';
   }
 
   @override
@@ -218,7 +219,7 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements UtilityState {
+abstract class Initial implements SettingsState {
   factory Initial() = _$Initial;
 }
 
@@ -229,7 +230,7 @@ abstract class _$$LoadingCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$LoadingCopyWithImpl<$Res> extends _$UtilityStateCopyWithImpl<$Res>
+class __$$LoadingCopyWithImpl<$Res> extends _$SettingsStateCopyWithImpl<$Res>
     implements _$$LoadingCopyWith<$Res> {
   __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
       : super(_value, (v) => _then(v as _$Loading));
@@ -245,7 +246,7 @@ class _$Loading implements Loading {
 
   @override
   String toString() {
-    return 'UtilityState.loading()';
+    return 'SettingsState.loading()';
   }
 
   @override
@@ -344,7 +345,7 @@ class _$Loading implements Loading {
   }
 }
 
-abstract class Loading implements UtilityState {
+abstract class Loading implements SettingsState {
   const factory Loading() = _$Loading;
 }
 
@@ -358,7 +359,7 @@ abstract class _$$ReloadingThemeCopyWith<$Res> {
 
 /// @nodoc
 class __$$ReloadingThemeCopyWithImpl<$Res>
-    extends _$UtilityStateCopyWithImpl<$Res>
+    extends _$SettingsStateCopyWithImpl<$Res>
     implements _$$ReloadingThemeCopyWith<$Res> {
   __$$ReloadingThemeCopyWithImpl(
       _$ReloadingTheme _value, $Res Function(_$ReloadingTheme) _then)
@@ -390,7 +391,7 @@ class _$ReloadingTheme implements ReloadingTheme {
 
   @override
   String toString() {
-    return 'UtilityState.reloadingTheme(isDark: $isDark)';
+    return 'SettingsState.reloadingTheme(isDark: $isDark)';
   }
 
   @override
@@ -497,7 +498,7 @@ class _$ReloadingTheme implements ReloadingTheme {
   }
 }
 
-abstract class ReloadingTheme implements UtilityState {
+abstract class ReloadingTheme implements SettingsState {
   const factory ReloadingTheme({required final bool isDark}) = _$ReloadingTheme;
 
   bool get isDark;
@@ -516,7 +517,7 @@ abstract class _$$ReloadingLocaleCopyWith<$Res> {
 
 /// @nodoc
 class __$$ReloadingLocaleCopyWithImpl<$Res>
-    extends _$UtilityStateCopyWithImpl<$Res>
+    extends _$SettingsStateCopyWithImpl<$Res>
     implements _$$ReloadingLocaleCopyWith<$Res> {
   __$$ReloadingLocaleCopyWithImpl(
       _$ReloadingLocale _value, $Res Function(_$ReloadingLocale) _then)
@@ -548,7 +549,7 @@ class _$ReloadingLocale implements ReloadingLocale {
 
   @override
   String toString() {
-    return 'UtilityState.reloadingLocale(locale: $locale)';
+    return 'SettingsState.reloadingLocale(locale: $locale)';
   }
 
   @override
@@ -655,7 +656,7 @@ class _$ReloadingLocale implements ReloadingLocale {
   }
 }
 
-abstract class ReloadingLocale implements UtilityState {
+abstract class ReloadingLocale implements SettingsState {
   const factory ReloadingLocale(final Locale locale) = _$ReloadingLocale;
 
   Locale get locale;
@@ -672,7 +673,8 @@ abstract class _$$ChangeStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$ChangeStateCopyWithImpl<$Res> extends _$UtilityStateCopyWithImpl<$Res>
+class __$$ChangeStateCopyWithImpl<$Res>
+    extends _$SettingsStateCopyWithImpl<$Res>
     implements _$$ChangeStateCopyWith<$Res> {
   __$$ChangeStateCopyWithImpl(
       _$ChangeState _value, $Res Function(_$ChangeState) _then)
@@ -689,7 +691,7 @@ class _$ChangeState implements ChangeState {
 
   @override
   String toString() {
-    return 'UtilityState.changeState()';
+    return 'SettingsState.changeState()';
   }
 
   @override
@@ -788,7 +790,7 @@ class _$ChangeState implements ChangeState {
   }
 }
 
-abstract class ChangeState implements UtilityState {
+abstract class ChangeState implements SettingsState {
   const factory ChangeState() = _$ChangeState;
 }
 
@@ -800,7 +802,7 @@ abstract class _$$ErrorCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$ErrorCopyWithImpl<$Res> extends _$UtilityStateCopyWithImpl<$Res>
+class __$$ErrorCopyWithImpl<$Res> extends _$SettingsStateCopyWithImpl<$Res>
     implements _$$ErrorCopyWith<$Res> {
   __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
       : super(_value, (v) => _then(v as _$Error));
@@ -831,7 +833,7 @@ class _$Error implements Error {
 
   @override
   String toString() {
-    return 'UtilityState.error(message: $message)';
+    return 'SettingsState.error(message: $message)';
   }
 
   @override
@@ -938,7 +940,7 @@ class _$Error implements Error {
   }
 }
 
-abstract class Error implements UtilityState {
+abstract class Error implements SettingsState {
   const factory Error({required final String message}) = _$Error;
 
   String get message;

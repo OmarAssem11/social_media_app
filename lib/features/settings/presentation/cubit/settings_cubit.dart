@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/constants/key_constants.dart';
 import 'package:social_media_app/core/data/datasources/cache_helper.dart';
-import 'package:social_media_app/core/presentation/bloc/utility_cubit/utility_state.dart';
 import 'package:social_media_app/di/injector.dart';
+import 'package:social_media_app/features/settings/presentation/cubit/settings_state.dart';
 
-class UtilityCubit extends Cubit<UtilityState> {
-  UtilityCubit() : super(Initial());
+@singleton
+class SettingsCubit extends Cubit<SettingsState> {
+  SettingsCubit() : super(Initial());
 
   bool isDark = false;
   Locale locale = KeyConstants.englishLocale;
@@ -23,13 +25,13 @@ class UtilityCubit extends Cubit<UtilityState> {
         isDark = false;
       }
     });
-    emit(const UtilityState.changeState());
+    emit(const SettingsState.changeState());
   }
 
   Future<void> switchTheme() async {
     isDark = !isDark;
     await getIt<CacheHelper>().put(KeyConstants.theme, isDark);
-    emit(UtilityState.reloadingTheme(isDark: isDark));
+    emit(SettingsState.reloadingTheme(isDark: isDark));
   }
 
   Future<void> getCurrentLocale() async {
@@ -46,12 +48,12 @@ class UtilityCubit extends Cubit<UtilityState> {
         locale = KeyConstants.englishLocale;
       }
     });
-    emit(const UtilityState.changeState());
+    emit(const SettingsState.changeState());
   }
 
   Future<void> changeLocale(Locale lc) async {
     locale = lc;
     await getIt<CacheHelper>().put(KeyConstants.locale, locale.toString());
-    emit(UtilityState.reloadingLocale(locale));
+    emit(SettingsState.reloadingLocale(locale));
   }
 }
