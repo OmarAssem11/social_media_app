@@ -9,6 +9,8 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
+    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(S.current.settings),

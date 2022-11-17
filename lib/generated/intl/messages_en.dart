@@ -26,7 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "appName": MessageLookupByLibrary.simpleMessage("Hashtag"),
-        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "areYouSureYouWantToLogout": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to logout?"),
         "canNotBeEmpty":

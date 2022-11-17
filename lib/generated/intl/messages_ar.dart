@@ -42,7 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الإكتروني"),
         "emailCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "البريد الإكتروني لا يمكن ان يكون فارغ"),
-        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "firstName": MessageLookupByLibrary.simpleMessage("الأسم الأول"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),

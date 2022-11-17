@@ -12,9 +12,9 @@ class LocaleDropDownButton extends StatefulWidget {
 }
 
 class _LocaleDropDownButtonState extends State<LocaleDropDownButton> {
-  late SettingsCubit cubit;
-  late Lang lang;
-  List<Lang> langs = [
+  late SettingsCubit _cubit;
+  late Lang _lang;
+  final _langs = [
     Lang(langName: S.current.english, locale: KeyConstants.englishLocale),
     Lang(langName: S.current.arabic, locale: KeyConstants.arabicLocale),
   ];
@@ -22,31 +22,31 @@ class _LocaleDropDownButtonState extends State<LocaleDropDownButton> {
   @override
   void initState() {
     super.initState();
-    cubit = BlocProvider.of<SettingsCubit>(context);
-    lang = Lang(
-      langName: _getLangName(cubit.locale),
-      locale: cubit.locale,
+    _cubit = BlocProvider.of<SettingsCubit>(context);
+    _lang = Lang(
+      langName: _getLangName(_cubit.locale),
+      locale: _cubit.locale,
     );
   }
 
-  String _getLangName(Locale lc) => langs
+  String _getLangName(Locale lc) => _langs
       .firstWhere(
         (lang) => lang.locale == lc,
-        orElse: () => langs.first,
+        orElse: () => _langs.first,
       )
       .langName;
 
-  Locale _getLocale(String langName) => langs
+  Locale _getLocale(String langName) => _langs
       .firstWhere(
         (lang) => lang.langName == langName,
-        orElse: () => langs.first,
+        orElse: () => _langs.first,
       )
       .locale;
 
   @override
   Widget build(BuildContext context) {
     return DropdownButton<String>(
-      items: langs
+      items: _langs
           .map(
             (lang) => DropdownMenuItem<String>(
               value: lang.langName,
@@ -54,14 +54,14 @@ class _LocaleDropDownButtonState extends State<LocaleDropDownButton> {
             ),
           )
           .toList(),
-      value: lang.langName,
+      value: _lang.langName,
       onChanged: (selectedLangName) {
         if (selectedLangName != null) {
-          lang = Lang(
+          _lang = Lang(
             langName: selectedLangName,
             locale: _getLocale(selectedLangName),
           );
-          cubit.changeLocale(lang.locale);
+          _cubit.changeLocale(_lang.locale);
           setState(() {});
         }
       },
