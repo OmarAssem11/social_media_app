@@ -7,7 +7,7 @@ import 'package:social_media_app/features/chat/domain/repository/chat_repository
 @LazySingleton(as: ChatRepository)
 class ChatRepositoryImpl implements ChatRepository {
   @override
-  Future<Either<Failure, Unit>> sendMessage() {
+  Future<Either<Failure, Unit>> sendMessage(Message message) {
     throw UnimplementedError();
   }
 
