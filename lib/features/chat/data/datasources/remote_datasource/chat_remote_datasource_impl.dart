@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/exceptions/return_app_exception.dart';
 import 'package:social_media_app/features/chat/data/datasources/remote_datasource/chat_remote_datasource.dart';
-import 'package:social_media_app/features/chat/data/models/message_model.dart';
+import 'package:social_media_app/features/chat/data/models/message_model/message_model.dart';
 import 'package:social_media_app/features/chat/data/services/chat_firebase_service.dart';
 
 @LazySingleton(as: ChatRemoteDataSource)

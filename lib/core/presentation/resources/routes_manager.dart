@@ -7,7 +7,8 @@ import 'package:social_media_app/features/auth/presentation/screens/login_screen
 import 'package:social_media_app/features/auth/presentation/screens/register_screen.dart';
 import 'package:social_media_app/features/auth/presentation/screens/starter_screen.dart';
 import 'package:social_media_app/features/chat/presentation/cubit/chat_cubit.dart';
-import 'package:social_media_app/features/chat/presentation/screens/chat_screen.dart';
+import 'package:social_media_app/features/chat/presentation/screens/chat_details_screen.dart';
+import 'package:social_media_app/features/chat/presentation/screens/chats_screen.dart';
 import 'package:social_media_app/features/posts/presentation/cubit/posts_cubit.dart';
 import 'package:social_media_app/features/posts/presentation/screens/add_post_screen.dart';
 import 'package:social_media_app/features/posts/presentation/screens/home_screen.dart';
@@ -23,6 +24,7 @@ class AppRoutes {
   static const String addPost = '/add_post';
   static const String settings = '/settings';
   static const String chat = '/chat';
+  static const String chatDetails = '/chat_details';
 }
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -80,7 +82,14 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (_) => BlocProvider(
           create: (_) => getIt<ChatCubit>(),
-          child: const ChatScreen(),
+          child: const ChatsScreen(),
+        ),
+      );
+    case AppRoutes.chatDetails:
+      return MaterialPageRoute(
+        builder: (_) => BlocProvider(
+          create: (_) => getIt<ChatCubit>(),
+          child: const ChatDetailsScreen(),
         ),
       );
     default:

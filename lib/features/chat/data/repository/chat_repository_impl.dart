@@ -4,9 +4,9 @@ import 'package:social_media_app/core/data/exceptions/app_exception.dart';
 import 'package:social_media_app/core/domain/failure/failure.dart';
 import 'package:social_media_app/core/domain/failure/return_failure.dart';
 import 'package:social_media_app/features/chat/data/datasources/remote_datasource/chat_remote_datasource.dart';
-import 'package:social_media_app/features/chat/data/mappers/message_mapper.dart';
-import 'package:social_media_app/features/chat/data/mappers/message_model_mapper.dart';
-import 'package:social_media_app/features/chat/domain/entities/message.dart';
+import 'package:social_media_app/features/chat/data/mappers/message_mapper/message_mapper.dart';
+import 'package:social_media_app/features/chat/data/mappers/message_mapper/message_model_mapper.dart';
+import 'package:social_media_app/features/chat/domain/entities/message/message.dart';
 import 'package:social_media_app/features/chat/domain/repository/chat_repository.dart';
 
 @LazySingleton(as: ChatRepository)

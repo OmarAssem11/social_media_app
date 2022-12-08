@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/constants/firebase_path.dart';
-import 'package:social_media_app/features/chat/data/models/message_model.dart';
+import 'package:social_media_app/features/chat/data/models/message_model/message_model.dart';
 
 @lazySingleton
 class ChatFirebaseService {

@@ -3,7 +3,7 @@ import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/domain/failure/failure.dart';
 import 'package:social_media_app/core/domain/params/app_params.dart';
 import 'package:social_media_app/core/domain/usecases/usecase.dart';
-import 'package:social_media_app/features/chat/domain/entities/message.dart';
+import 'package:social_media_app/features/chat/domain/entities/message/message.dart';
 import 'package:social_media_app/features/chat/domain/repository/chat_repository.dart';
 
 @lazySingleton
