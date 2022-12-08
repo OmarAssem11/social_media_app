@@ -8,14 +8,14 @@ import 'package:social_media_app/features/posts/data/models/post_model.dart';
 
 @lazySingleton
 class PostsFirebaseService {
-  final postsCollection =
+  final _postsCollection =
       FirebaseFirestore.instance.collection(FirebasePath.posts);
 
   Future<void> addPost(PostModel postModel) =>
-      postsCollection.doc().set(postModel.toJson());
+      _postsCollection.doc().set(postModel.toJson());
 
   Future<List<PostModel>> getAllPosts() async {
-    final querySnapshot = await postsCollection.get();
+    final querySnapshot = await _postsCollection.get();
     final postModels = querySnapshot.docs.map(
       (queryDocumentSnapshot) {
         final json = queryDocumentSnapshot.data()
@@ -27,10 +27,10 @@ class PostsFirebaseService {
   }
 
   Future<void> editPost(PostModel postModel) =>
-      postsCollection.doc(postModel.id).update(postModel.toJson());
+      _postsCollection.doc(postModel.id).update(postModel.toJson());
 
   Future<void> deletePost(String postId) =>
-      postsCollection.doc(postId).delete();
+      _postsCollection.doc(postId).delete();
 
   Future<String> uploadImage(File imageFile) async {
     final path =

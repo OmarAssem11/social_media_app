@@ -1,17 +1,18 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:social_media_app/core/data/constants/key_constants.dart';
 import 'package:social_media_app/core/data/json_converters/date_time_converter.dart';
 
 part 'message_model.g.dart';
 
 @JsonSerializable()
 class MessageModel {
-  @JsonKey(name: 'sender_id')
+  @JsonKey(name: KeyConstants.senderId)
   final String senderId;
-  @JsonKey(name: 'receiver_id')
+  @JsonKey(name: KeyConstants.receiverId)
   final String receiverId;
   final String text;
   @DateTimeConverter()
-  @JsonKey(name: 'date_time')
+  @JsonKey(name: KeyConstants.dateTime)
   final DateTime dateTime;
 
   const MessageModel({

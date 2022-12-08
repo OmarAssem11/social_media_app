@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:social_media_app/core/domain/params/no_params.dart';
 import 'package:social_media_app/features/chat/domain/entities/message.dart';
 import 'package:social_media_app/features/chat/domain/usecases/get_messages_usecase.dart';
 import 'package:social_media_app/features/chat/domain/usecases/send_message_usecase.dart';
@@ -27,9 +26,10 @@ class ChatCubit extends Cubit<ChatState> {
     );
   }
 
-  Future<void> getMessages() async {
+  Future<void> getMessages(String receiverId) async {
     emit(const GetMessagesLoading());
-    final result = await _getMessagesUseCase(const NoParams());
+    final result =
+        await _getMessagesUseCase(GetMessagesParams(receiverId: receiverId));
     emit(
       result.fold(
         (failure) => const GetMessagesError(),
