@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("السابق"),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage("!حدث خطأ"),
         "submit": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "typeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("...أكتب رسالتك هنا"),
         "w": MessageLookupByLibrary.simpleMessage("أ"),
         "whatIsOnYourMind": MessageLookupByLibrary.simpleMessage("بم تفكر؟"),
         "y": MessageLookupByLibrary.simpleMessage("ع"),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 import 'package:social_media_app/features/chat/domain/entities/message/message.dart';
 
 class ChatMessage extends StatelessWidget {
@@ -18,14 +19,14 @@ Widget buildMessage(Message message) => Align(
         decoration: BoxDecoration(
           color: Colors.grey[300],
           borderRadius: const BorderRadiusDirectional.only(
-            bottomEnd: Radius.circular(10),
-            topStart: Radius.circular(10),
-            topEnd: Radius.circular(10),
+            bottomEnd: Radius.circular(Sizes.s12),
+            topStart: Radius.circular(Sizes.s12),
+            topEnd: Radius.circular(Sizes.s12),
           ),
         ),
         padding: const EdgeInsets.symmetric(
-          vertical: 5,
-          horizontal: 10,
+          vertical: Insets.xs,
+          horizontal: Insets.s,
         ),
         child: Text(message.text),
       ),
@@ -37,14 +38,14 @@ Widget buildMyMessage(Message message) => Align(
         decoration: BoxDecoration(
           color: Colors.blue.withOpacity(.3),
           borderRadius: const BorderRadiusDirectional.only(
-            bottomStart: Radius.circular(10),
-            topStart: Radius.circular(10),
-            topEnd: Radius.circular(10),
+            bottomStart: Radius.circular(Sizes.s12),
+            topStart: Radius.circular(Sizes.s12),
+            topEnd: Radius.circular(Sizes.s12),
           ),
         ),
         padding: const EdgeInsets.symmetric(
-          vertical: 5,
-          horizontal: 10,
+          vertical: Insets.xs,
+          horizontal: Insets.s,
         ),
         child: Text(message.text),
       ),

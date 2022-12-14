@@ -49,32 +49,32 @@ mixin _$SettingsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(Loading value) loading,
+    required TResult Function(SettingsInitial value) initial,
+    required TResult Function(SettingsLoading value) loading,
     required TResult Function(ReloadingTheme value) reloadingTheme,
     required TResult Function(ReloadingLocale value) reloadingLocale,
     required TResult Function(ChangeState value) changeState,
-    required TResult Function(Error value) error,
+    required TResult Function(SettingsError value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -98,25 +98,28 @@ class _$SettingsStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$InitialCopyWith<$Res> {
-  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
-      __$$InitialCopyWithImpl<$Res>;
+abstract class _$$SettingsInitialCopyWith<$Res> {
+  factory _$$SettingsInitialCopyWith(
+          _$SettingsInitial value, $Res Function(_$SettingsInitial) then) =
+      __$$SettingsInitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialCopyWithImpl<$Res> extends _$SettingsStateCopyWithImpl<$Res>
-    implements _$$InitialCopyWith<$Res> {
-  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
-      : super(_value, (v) => _then(v as _$Initial));
+class __$$SettingsInitialCopyWithImpl<$Res>
+    extends _$SettingsStateCopyWithImpl<$Res>
+    implements _$$SettingsInitialCopyWith<$Res> {
+  __$$SettingsInitialCopyWithImpl(
+      _$SettingsInitial _value, $Res Function(_$SettingsInitial) _then)
+      : super(_value, (v) => _then(v as _$SettingsInitial));
 
   @override
-  _$Initial get _value => super._value as _$Initial;
+  _$SettingsInitial get _value => super._value as _$SettingsInitial;
 }
 
 /// @nodoc
 
-class _$Initial implements Initial {
-  _$Initial();
+class _$SettingsInitial implements SettingsInitial {
+  _$SettingsInitial();
 
   @override
   String toString() {
@@ -126,7 +129,7 @@ class _$Initial implements Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Initial);
+        (other.runtimeType == runtimeType && other is _$SettingsInitial);
   }
 
   @override
@@ -178,12 +181,12 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(Loading value) loading,
+    required TResult Function(SettingsInitial value) initial,
+    required TResult Function(SettingsLoading value) loading,
     required TResult Function(ReloadingTheme value) reloadingTheme,
     required TResult Function(ReloadingLocale value) reloadingLocale,
     required TResult Function(ChangeState value) changeState,
-    required TResult Function(Error value) error,
+    required TResult Function(SettingsError value) error,
   }) {
     return initial(this);
   }
@@ -191,12 +194,12 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
   }) {
     return initial?.call(this);
   }
@@ -204,12 +207,12 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -219,30 +222,33 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements SettingsState {
-  factory Initial() = _$Initial;
+abstract class SettingsInitial implements SettingsState {
+  factory SettingsInitial() = _$SettingsInitial;
 }
 
 /// @nodoc
-abstract class _$$LoadingCopyWith<$Res> {
-  factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
-      __$$LoadingCopyWithImpl<$Res>;
+abstract class _$$SettingsLoadingCopyWith<$Res> {
+  factory _$$SettingsLoadingCopyWith(
+          _$SettingsLoading value, $Res Function(_$SettingsLoading) then) =
+      __$$SettingsLoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingCopyWithImpl<$Res> extends _$SettingsStateCopyWithImpl<$Res>
-    implements _$$LoadingCopyWith<$Res> {
-  __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
-      : super(_value, (v) => _then(v as _$Loading));
+class __$$SettingsLoadingCopyWithImpl<$Res>
+    extends _$SettingsStateCopyWithImpl<$Res>
+    implements _$$SettingsLoadingCopyWith<$Res> {
+  __$$SettingsLoadingCopyWithImpl(
+      _$SettingsLoading _value, $Res Function(_$SettingsLoading) _then)
+      : super(_value, (v) => _then(v as _$SettingsLoading));
 
   @override
-  _$Loading get _value => super._value as _$Loading;
+  _$SettingsLoading get _value => super._value as _$SettingsLoading;
 }
 
 /// @nodoc
 
-class _$Loading implements Loading {
-  const _$Loading();
+class _$SettingsLoading implements SettingsLoading {
+  const _$SettingsLoading();
 
   @override
   String toString() {
@@ -252,7 +258,7 @@ class _$Loading implements Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Loading);
+        (other.runtimeType == runtimeType && other is _$SettingsLoading);
   }
 
   @override
@@ -304,12 +310,12 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(Loading value) loading,
+    required TResult Function(SettingsInitial value) initial,
+    required TResult Function(SettingsLoading value) loading,
     required TResult Function(ReloadingTheme value) reloadingTheme,
     required TResult Function(ReloadingLocale value) reloadingLocale,
     required TResult Function(ChangeState value) changeState,
-    required TResult Function(Error value) error,
+    required TResult Function(SettingsError value) error,
   }) {
     return loading(this);
   }
@@ -317,12 +323,12 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
   }) {
     return loading?.call(this);
   }
@@ -330,12 +336,12 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -345,8 +351,8 @@ class _$Loading implements Loading {
   }
 }
 
-abstract class Loading implements SettingsState {
-  const factory Loading() = _$Loading;
+abstract class SettingsLoading implements SettingsState {
+  const factory SettingsLoading() = _$SettingsLoading;
 }
 
 /// @nodoc
@@ -457,12 +463,12 @@ class _$ReloadingTheme implements ReloadingTheme {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(Loading value) loading,
+    required TResult Function(SettingsInitial value) initial,
+    required TResult Function(SettingsLoading value) loading,
     required TResult Function(ReloadingTheme value) reloadingTheme,
     required TResult Function(ReloadingLocale value) reloadingLocale,
     required TResult Function(ChangeState value) changeState,
-    required TResult Function(Error value) error,
+    required TResult Function(SettingsError value) error,
   }) {
     return reloadingTheme(this);
   }
@@ -470,12 +476,12 @@ class _$ReloadingTheme implements ReloadingTheme {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
   }) {
     return reloadingTheme?.call(this);
   }
@@ -483,12 +489,12 @@ class _$ReloadingTheme implements ReloadingTheme {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
     required TResult orElse(),
   }) {
     if (reloadingTheme != null) {
@@ -615,12 +621,12 @@ class _$ReloadingLocale implements ReloadingLocale {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(Loading value) loading,
+    required TResult Function(SettingsInitial value) initial,
+    required TResult Function(SettingsLoading value) loading,
     required TResult Function(ReloadingTheme value) reloadingTheme,
     required TResult Function(ReloadingLocale value) reloadingLocale,
     required TResult Function(ChangeState value) changeState,
-    required TResult Function(Error value) error,
+    required TResult Function(SettingsError value) error,
   }) {
     return reloadingLocale(this);
   }
@@ -628,12 +634,12 @@ class _$ReloadingLocale implements ReloadingLocale {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
   }) {
     return reloadingLocale?.call(this);
   }
@@ -641,12 +647,12 @@ class _$ReloadingLocale implements ReloadingLocale {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
     required TResult orElse(),
   }) {
     if (reloadingLocale != null) {
@@ -749,12 +755,12 @@ class _$ChangeState implements ChangeState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(Loading value) loading,
+    required TResult Function(SettingsInitial value) initial,
+    required TResult Function(SettingsLoading value) loading,
     required TResult Function(ReloadingTheme value) reloadingTheme,
     required TResult Function(ReloadingLocale value) reloadingLocale,
     required TResult Function(ChangeState value) changeState,
-    required TResult Function(Error value) error,
+    required TResult Function(SettingsError value) error,
   }) {
     return changeState(this);
   }
@@ -762,12 +768,12 @@ class _$ChangeState implements ChangeState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
   }) {
     return changeState?.call(this);
   }
@@ -775,12 +781,12 @@ class _$ChangeState implements ChangeState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
     required TResult orElse(),
   }) {
     if (changeState != null) {
@@ -795,26 +801,29 @@ abstract class ChangeState implements SettingsState {
 }
 
 /// @nodoc
-abstract class _$$ErrorCopyWith<$Res> {
-  factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
-      __$$ErrorCopyWithImpl<$Res>;
+abstract class _$$SettingsErrorCopyWith<$Res> {
+  factory _$$SettingsErrorCopyWith(
+          _$SettingsError value, $Res Function(_$SettingsError) then) =
+      __$$SettingsErrorCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorCopyWithImpl<$Res> extends _$SettingsStateCopyWithImpl<$Res>
-    implements _$$ErrorCopyWith<$Res> {
-  __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
-      : super(_value, (v) => _then(v as _$Error));
+class __$$SettingsErrorCopyWithImpl<$Res>
+    extends _$SettingsStateCopyWithImpl<$Res>
+    implements _$$SettingsErrorCopyWith<$Res> {
+  __$$SettingsErrorCopyWithImpl(
+      _$SettingsError _value, $Res Function(_$SettingsError) _then)
+      : super(_value, (v) => _then(v as _$SettingsError));
 
   @override
-  _$Error get _value => super._value as _$Error;
+  _$SettingsError get _value => super._value as _$SettingsError;
 
   @override
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(_$Error(
+    return _then(_$SettingsError(
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -825,8 +834,8 @@ class __$$ErrorCopyWithImpl<$Res> extends _$SettingsStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$Error implements Error {
-  const _$Error({required this.message});
+class _$SettingsError implements SettingsError {
+  const _$SettingsError({required this.message});
 
   @override
   final String message;
@@ -840,7 +849,7 @@ class _$Error implements Error {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Error &&
+            other is _$SettingsError &&
             const DeepCollectionEquality().equals(other.message, message));
   }
 
@@ -850,8 +859,8 @@ class _$Error implements Error {
 
   @JsonKey(ignore: true)
   @override
-  _$$ErrorCopyWith<_$Error> get copyWith =>
-      __$$ErrorCopyWithImpl<_$Error>(this, _$identity);
+  _$$SettingsErrorCopyWith<_$SettingsError> get copyWith =>
+      __$$SettingsErrorCopyWithImpl<_$SettingsError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -899,12 +908,12 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(Loading value) loading,
+    required TResult Function(SettingsInitial value) initial,
+    required TResult Function(SettingsLoading value) loading,
     required TResult Function(ReloadingTheme value) reloadingTheme,
     required TResult Function(ReloadingLocale value) reloadingLocale,
     required TResult Function(ChangeState value) changeState,
-    required TResult Function(Error value) error,
+    required TResult Function(SettingsError value) error,
   }) {
     return error(this);
   }
@@ -912,12 +921,12 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
   }) {
     return error?.call(this);
   }
@@ -925,12 +934,12 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(Loading value)? loading,
+    TResult Function(SettingsInitial value)? initial,
+    TResult Function(SettingsLoading value)? loading,
     TResult Function(ReloadingTheme value)? reloadingTheme,
     TResult Function(ReloadingLocale value)? reloadingLocale,
     TResult Function(ChangeState value)? changeState,
-    TResult Function(Error value)? error,
+    TResult Function(SettingsError value)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -940,10 +949,12 @@ class _$Error implements Error {
   }
 }
 
-abstract class Error implements SettingsState {
-  const factory Error({required final String message}) = _$Error;
+abstract class SettingsError implements SettingsState {
+  const factory SettingsError({required final String message}) =
+      _$SettingsError;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$ErrorCopyWith<_$Error> get copyWith => throw _privateConstructorUsedError;
+  _$$SettingsErrorCopyWith<_$SettingsError> get copyWith =>
+      throw _privateConstructorUsedError;
 }

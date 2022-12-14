@@ -23,12 +23,12 @@ class AppRoutes {
   static const String home = '/home';
   static const String addPost = '/add_post';
   static const String settings = '/settings';
-  static const String chat = '/chat';
+  static const String chats = '/chats';
   static const String chatDetails = '/chat_details';
 }
 
-Route<dynamic> onGenerateRoute(RouteSettings settings) {
-  switch (settings.name) {
+Route<dynamic> onGenerateRoute(RouteSettings routeSettings) {
+  switch (routeSettings.name) {
     case AppRoutes.starter:
       return MaterialPageRoute(
         builder: (_) => BlocProvider(
@@ -78,7 +78,7 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
           child: const SettingsScreen(),
         ),
       );
-    case AppRoutes.chat:
+    case AppRoutes.chats:
       return MaterialPageRoute(
         builder: (_) => BlocProvider(
           create: (_) => getIt<ChatCubit>(),
@@ -91,6 +91,7 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
           create: (_) => getIt<ChatCubit>(),
           child: const ChatDetailsScreen(),
         ),
+        settings: routeSettings,
       );
     default:
       return undefinedRoute();

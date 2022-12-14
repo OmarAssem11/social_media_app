@@ -19,6 +19,9 @@ mixin _$ChatState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
     required TResult Function() sendMessageLoading,
     required TResult Function() sendMessageSuccess,
     required TResult Function() sendMessageError,
@@ -30,6 +33,9 @@ mixin _$ChatState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -41,6 +47,9 @@ mixin _$ChatState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -53,6 +62,9 @@ mixin _$ChatState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
     required TResult Function(SendMessageLoading value) sendMessageLoading,
     required TResult Function(SendMessageSuccess value) sendMessageSuccess,
     required TResult Function(SendMessageError value) sendMessageError,
@@ -64,6 +76,9 @@ mixin _$ChatState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -75,6 +90,9 @@ mixin _$ChatState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -142,6 +160,9 @@ class _$ChatInitial implements ChatInitial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
     required TResult Function() sendMessageLoading,
     required TResult Function() sendMessageSuccess,
     required TResult Function() sendMessageError,
@@ -156,6 +177,9 @@ class _$ChatInitial implements ChatInitial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -170,6 +194,9 @@ class _$ChatInitial implements ChatInitial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -188,6 +215,9 @@ class _$ChatInitial implements ChatInitial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
     required TResult Function(SendMessageLoading value) sendMessageLoading,
     required TResult Function(SendMessageSuccess value) sendMessageSuccess,
     required TResult Function(SendMessageError value) sendMessageError,
@@ -202,6 +232,9 @@ class _$ChatInitial implements ChatInitial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -216,6 +249,9 @@ class _$ChatInitial implements ChatInitial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -233,6 +269,497 @@ class _$ChatInitial implements ChatInitial {
 
 abstract class ChatInitial implements ChatState {
   const factory ChatInitial() = _$ChatInitial;
+}
+
+/// @nodoc
+abstract class _$$GetChatsLoadingCopyWith<$Res> {
+  factory _$$GetChatsLoadingCopyWith(
+          _$GetChatsLoading value, $Res Function(_$GetChatsLoading) then) =
+      __$$GetChatsLoadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetChatsLoadingCopyWithImpl<$Res>
+    extends _$ChatStateCopyWithImpl<$Res>
+    implements _$$GetChatsLoadingCopyWith<$Res> {
+  __$$GetChatsLoadingCopyWithImpl(
+      _$GetChatsLoading _value, $Res Function(_$GetChatsLoading) _then)
+      : super(_value, (v) => _then(v as _$GetChatsLoading));
+
+  @override
+  _$GetChatsLoading get _value => super._value as _$GetChatsLoading;
+}
+
+/// @nodoc
+
+class _$GetChatsLoading implements GetChatsLoading {
+  const _$GetChatsLoading();
+
+  @override
+  String toString() {
+    return 'ChatState.getChatsLoading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetChatsLoading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
+    required TResult Function() sendMessageLoading,
+    required TResult Function() sendMessageSuccess,
+    required TResult Function() sendMessageError,
+    required TResult Function() getMessagesLoading,
+    required TResult Function(List<Message> messages) getMessagesSuccess,
+    required TResult Function() getMessagesError,
+  }) {
+    return getChatsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
+    TResult Function()? sendMessageLoading,
+    TResult Function()? sendMessageSuccess,
+    TResult Function()? sendMessageError,
+    TResult Function()? getMessagesLoading,
+    TResult Function(List<Message> messages)? getMessagesSuccess,
+    TResult Function()? getMessagesError,
+  }) {
+    return getChatsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
+    TResult Function()? sendMessageLoading,
+    TResult Function()? sendMessageSuccess,
+    TResult Function()? sendMessageError,
+    TResult Function()? getMessagesLoading,
+    TResult Function(List<Message> messages)? getMessagesSuccess,
+    TResult Function()? getMessagesError,
+    required TResult orElse(),
+  }) {
+    if (getChatsLoading != null) {
+      return getChatsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
+    required TResult Function(SendMessageLoading value) sendMessageLoading,
+    required TResult Function(SendMessageSuccess value) sendMessageSuccess,
+    required TResult Function(SendMessageError value) sendMessageError,
+    required TResult Function(GetMessagesLoading value) getMessagesLoading,
+    required TResult Function(GetMessagesSuccess value) getMessagesSuccess,
+    required TResult Function(GetMessagesError value) getMessagesError,
+  }) {
+    return getChatsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
+    TResult Function(SendMessageLoading value)? sendMessageLoading,
+    TResult Function(SendMessageSuccess value)? sendMessageSuccess,
+    TResult Function(SendMessageError value)? sendMessageError,
+    TResult Function(GetMessagesLoading value)? getMessagesLoading,
+    TResult Function(GetMessagesSuccess value)? getMessagesSuccess,
+    TResult Function(GetMessagesError value)? getMessagesError,
+  }) {
+    return getChatsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
+    TResult Function(SendMessageLoading value)? sendMessageLoading,
+    TResult Function(SendMessageSuccess value)? sendMessageSuccess,
+    TResult Function(SendMessageError value)? sendMessageError,
+    TResult Function(GetMessagesLoading value)? getMessagesLoading,
+    TResult Function(GetMessagesSuccess value)? getMessagesSuccess,
+    TResult Function(GetMessagesError value)? getMessagesError,
+    required TResult orElse(),
+  }) {
+    if (getChatsLoading != null) {
+      return getChatsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetChatsLoading implements ChatState {
+  const factory GetChatsLoading() = _$GetChatsLoading;
+}
+
+/// @nodoc
+abstract class _$$GetChatsSuccessCopyWith<$Res> {
+  factory _$$GetChatsSuccessCopyWith(
+          _$GetChatsSuccess value, $Res Function(_$GetChatsSuccess) then) =
+      __$$GetChatsSuccessCopyWithImpl<$Res>;
+  $Res call({List<Chat> chats});
+}
+
+/// @nodoc
+class __$$GetChatsSuccessCopyWithImpl<$Res>
+    extends _$ChatStateCopyWithImpl<$Res>
+    implements _$$GetChatsSuccessCopyWith<$Res> {
+  __$$GetChatsSuccessCopyWithImpl(
+      _$GetChatsSuccess _value, $Res Function(_$GetChatsSuccess) _then)
+      : super(_value, (v) => _then(v as _$GetChatsSuccess));
+
+  @override
+  _$GetChatsSuccess get _value => super._value as _$GetChatsSuccess;
+
+  @override
+  $Res call({
+    Object? chats = freezed,
+  }) {
+    return _then(_$GetChatsSuccess(
+      chats == freezed
+          ? _value._chats
+          : chats // ignore: cast_nullable_to_non_nullable
+              as List<Chat>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetChatsSuccess implements GetChatsSuccess {
+  const _$GetChatsSuccess(final List<Chat> chats) : _chats = chats;
+
+  final List<Chat> _chats;
+  @override
+  List<Chat> get chats {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_chats);
+  }
+
+  @override
+  String toString() {
+    return 'ChatState.getChatsSuccess(chats: $chats)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetChatsSuccess &&
+            const DeepCollectionEquality().equals(other._chats, _chats));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_chats));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$GetChatsSuccessCopyWith<_$GetChatsSuccess> get copyWith =>
+      __$$GetChatsSuccessCopyWithImpl<_$GetChatsSuccess>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
+    required TResult Function() sendMessageLoading,
+    required TResult Function() sendMessageSuccess,
+    required TResult Function() sendMessageError,
+    required TResult Function() getMessagesLoading,
+    required TResult Function(List<Message> messages) getMessagesSuccess,
+    required TResult Function() getMessagesError,
+  }) {
+    return getChatsSuccess(chats);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
+    TResult Function()? sendMessageLoading,
+    TResult Function()? sendMessageSuccess,
+    TResult Function()? sendMessageError,
+    TResult Function()? getMessagesLoading,
+    TResult Function(List<Message> messages)? getMessagesSuccess,
+    TResult Function()? getMessagesError,
+  }) {
+    return getChatsSuccess?.call(chats);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
+    TResult Function()? sendMessageLoading,
+    TResult Function()? sendMessageSuccess,
+    TResult Function()? sendMessageError,
+    TResult Function()? getMessagesLoading,
+    TResult Function(List<Message> messages)? getMessagesSuccess,
+    TResult Function()? getMessagesError,
+    required TResult orElse(),
+  }) {
+    if (getChatsSuccess != null) {
+      return getChatsSuccess(chats);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
+    required TResult Function(SendMessageLoading value) sendMessageLoading,
+    required TResult Function(SendMessageSuccess value) sendMessageSuccess,
+    required TResult Function(SendMessageError value) sendMessageError,
+    required TResult Function(GetMessagesLoading value) getMessagesLoading,
+    required TResult Function(GetMessagesSuccess value) getMessagesSuccess,
+    required TResult Function(GetMessagesError value) getMessagesError,
+  }) {
+    return getChatsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
+    TResult Function(SendMessageLoading value)? sendMessageLoading,
+    TResult Function(SendMessageSuccess value)? sendMessageSuccess,
+    TResult Function(SendMessageError value)? sendMessageError,
+    TResult Function(GetMessagesLoading value)? getMessagesLoading,
+    TResult Function(GetMessagesSuccess value)? getMessagesSuccess,
+    TResult Function(GetMessagesError value)? getMessagesError,
+  }) {
+    return getChatsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
+    TResult Function(SendMessageLoading value)? sendMessageLoading,
+    TResult Function(SendMessageSuccess value)? sendMessageSuccess,
+    TResult Function(SendMessageError value)? sendMessageError,
+    TResult Function(GetMessagesLoading value)? getMessagesLoading,
+    TResult Function(GetMessagesSuccess value)? getMessagesSuccess,
+    TResult Function(GetMessagesError value)? getMessagesError,
+    required TResult orElse(),
+  }) {
+    if (getChatsSuccess != null) {
+      return getChatsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetChatsSuccess implements ChatState {
+  const factory GetChatsSuccess(final List<Chat> chats) = _$GetChatsSuccess;
+
+  List<Chat> get chats;
+  @JsonKey(ignore: true)
+  _$$GetChatsSuccessCopyWith<_$GetChatsSuccess> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetChatsErrorCopyWith<$Res> {
+  factory _$$GetChatsErrorCopyWith(
+          _$GetChatsError value, $Res Function(_$GetChatsError) then) =
+      __$$GetChatsErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetChatsErrorCopyWithImpl<$Res> extends _$ChatStateCopyWithImpl<$Res>
+    implements _$$GetChatsErrorCopyWith<$Res> {
+  __$$GetChatsErrorCopyWithImpl(
+      _$GetChatsError _value, $Res Function(_$GetChatsError) _then)
+      : super(_value, (v) => _then(v as _$GetChatsError));
+
+  @override
+  _$GetChatsError get _value => super._value as _$GetChatsError;
+}
+
+/// @nodoc
+
+class _$GetChatsError implements GetChatsError {
+  const _$GetChatsError();
+
+  @override
+  String toString() {
+    return 'ChatState.getChatsError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetChatsError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
+    required TResult Function() sendMessageLoading,
+    required TResult Function() sendMessageSuccess,
+    required TResult Function() sendMessageError,
+    required TResult Function() getMessagesLoading,
+    required TResult Function(List<Message> messages) getMessagesSuccess,
+    required TResult Function() getMessagesError,
+  }) {
+    return getChatsError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
+    TResult Function()? sendMessageLoading,
+    TResult Function()? sendMessageSuccess,
+    TResult Function()? sendMessageError,
+    TResult Function()? getMessagesLoading,
+    TResult Function(List<Message> messages)? getMessagesSuccess,
+    TResult Function()? getMessagesError,
+  }) {
+    return getChatsError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
+    TResult Function()? sendMessageLoading,
+    TResult Function()? sendMessageSuccess,
+    TResult Function()? sendMessageError,
+    TResult Function()? getMessagesLoading,
+    TResult Function(List<Message> messages)? getMessagesSuccess,
+    TResult Function()? getMessagesError,
+    required TResult orElse(),
+  }) {
+    if (getChatsError != null) {
+      return getChatsError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
+    required TResult Function(SendMessageLoading value) sendMessageLoading,
+    required TResult Function(SendMessageSuccess value) sendMessageSuccess,
+    required TResult Function(SendMessageError value) sendMessageError,
+    required TResult Function(GetMessagesLoading value) getMessagesLoading,
+    required TResult Function(GetMessagesSuccess value) getMessagesSuccess,
+    required TResult Function(GetMessagesError value) getMessagesError,
+  }) {
+    return getChatsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
+    TResult Function(SendMessageLoading value)? sendMessageLoading,
+    TResult Function(SendMessageSuccess value)? sendMessageSuccess,
+    TResult Function(SendMessageError value)? sendMessageError,
+    TResult Function(GetMessagesLoading value)? getMessagesLoading,
+    TResult Function(GetMessagesSuccess value)? getMessagesSuccess,
+    TResult Function(GetMessagesError value)? getMessagesError,
+  }) {
+    return getChatsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
+    TResult Function(SendMessageLoading value)? sendMessageLoading,
+    TResult Function(SendMessageSuccess value)? sendMessageSuccess,
+    TResult Function(SendMessageError value)? sendMessageError,
+    TResult Function(GetMessagesLoading value)? getMessagesLoading,
+    TResult Function(GetMessagesSuccess value)? getMessagesSuccess,
+    TResult Function(GetMessagesError value)? getMessagesError,
+    required TResult orElse(),
+  }) {
+    if (getChatsError != null) {
+      return getChatsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetChatsError implements ChatState {
+  const factory GetChatsError() = _$GetChatsError;
 }
 
 /// @nodoc
@@ -277,6 +804,9 @@ class _$SendMessageLoading implements SendMessageLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
     required TResult Function() sendMessageLoading,
     required TResult Function() sendMessageSuccess,
     required TResult Function() sendMessageError,
@@ -291,6 +821,9 @@ class _$SendMessageLoading implements SendMessageLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -305,6 +838,9 @@ class _$SendMessageLoading implements SendMessageLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -323,6 +859,9 @@ class _$SendMessageLoading implements SendMessageLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
     required TResult Function(SendMessageLoading value) sendMessageLoading,
     required TResult Function(SendMessageSuccess value) sendMessageSuccess,
     required TResult Function(SendMessageError value) sendMessageError,
@@ -337,6 +876,9 @@ class _$SendMessageLoading implements SendMessageLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -351,6 +893,9 @@ class _$SendMessageLoading implements SendMessageLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -412,6 +957,9 @@ class _$SendMessageSuccess implements SendMessageSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
     required TResult Function() sendMessageLoading,
     required TResult Function() sendMessageSuccess,
     required TResult Function() sendMessageError,
@@ -426,6 +974,9 @@ class _$SendMessageSuccess implements SendMessageSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -440,6 +991,9 @@ class _$SendMessageSuccess implements SendMessageSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -458,6 +1012,9 @@ class _$SendMessageSuccess implements SendMessageSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
     required TResult Function(SendMessageLoading value) sendMessageLoading,
     required TResult Function(SendMessageSuccess value) sendMessageSuccess,
     required TResult Function(SendMessageError value) sendMessageError,
@@ -472,6 +1029,9 @@ class _$SendMessageSuccess implements SendMessageSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -486,6 +1046,9 @@ class _$SendMessageSuccess implements SendMessageSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -547,6 +1110,9 @@ class _$SendMessageError implements SendMessageError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
     required TResult Function() sendMessageLoading,
     required TResult Function() sendMessageSuccess,
     required TResult Function() sendMessageError,
@@ -561,6 +1127,9 @@ class _$SendMessageError implements SendMessageError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -575,6 +1144,9 @@ class _$SendMessageError implements SendMessageError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -593,6 +1165,9 @@ class _$SendMessageError implements SendMessageError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
     required TResult Function(SendMessageLoading value) sendMessageLoading,
     required TResult Function(SendMessageSuccess value) sendMessageSuccess,
     required TResult Function(SendMessageError value) sendMessageError,
@@ -607,6 +1182,9 @@ class _$SendMessageError implements SendMessageError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -621,6 +1199,9 @@ class _$SendMessageError implements SendMessageError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -682,6 +1263,9 @@ class _$GetMessagesLoading implements GetMessagesLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
     required TResult Function() sendMessageLoading,
     required TResult Function() sendMessageSuccess,
     required TResult Function() sendMessageError,
@@ -696,6 +1280,9 @@ class _$GetMessagesLoading implements GetMessagesLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -710,6 +1297,9 @@ class _$GetMessagesLoading implements GetMessagesLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -728,6 +1318,9 @@ class _$GetMessagesLoading implements GetMessagesLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
     required TResult Function(SendMessageLoading value) sendMessageLoading,
     required TResult Function(SendMessageSuccess value) sendMessageSuccess,
     required TResult Function(SendMessageError value) sendMessageError,
@@ -742,6 +1335,9 @@ class _$GetMessagesLoading implements GetMessagesLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -756,6 +1352,9 @@ class _$GetMessagesLoading implements GetMessagesLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -847,6 +1446,9 @@ class _$GetMessagesSuccess implements GetMessagesSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
     required TResult Function() sendMessageLoading,
     required TResult Function() sendMessageSuccess,
     required TResult Function() sendMessageError,
@@ -861,6 +1463,9 @@ class _$GetMessagesSuccess implements GetMessagesSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -875,6 +1480,9 @@ class _$GetMessagesSuccess implements GetMessagesSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -893,6 +1501,9 @@ class _$GetMessagesSuccess implements GetMessagesSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
     required TResult Function(SendMessageLoading value) sendMessageLoading,
     required TResult Function(SendMessageSuccess value) sendMessageSuccess,
     required TResult Function(SendMessageError value) sendMessageError,
@@ -907,6 +1518,9 @@ class _$GetMessagesSuccess implements GetMessagesSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -921,6 +1535,9 @@ class _$GetMessagesSuccess implements GetMessagesSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -988,6 +1605,9 @@ class _$GetMessagesError implements GetMessagesError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() getChatsLoading,
+    required TResult Function(List<Chat> chats) getChatsSuccess,
+    required TResult Function() getChatsError,
     required TResult Function() sendMessageLoading,
     required TResult Function() sendMessageSuccess,
     required TResult Function() sendMessageError,
@@ -1002,6 +1622,9 @@ class _$GetMessagesError implements GetMessagesError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -1016,6 +1639,9 @@ class _$GetMessagesError implements GetMessagesError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? getChatsLoading,
+    TResult Function(List<Chat> chats)? getChatsSuccess,
+    TResult Function()? getChatsError,
     TResult Function()? sendMessageLoading,
     TResult Function()? sendMessageSuccess,
     TResult Function()? sendMessageError,
@@ -1034,6 +1660,9 @@ class _$GetMessagesError implements GetMessagesError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ChatInitial value) initial,
+    required TResult Function(GetChatsLoading value) getChatsLoading,
+    required TResult Function(GetChatsSuccess value) getChatsSuccess,
+    required TResult Function(GetChatsError value) getChatsError,
     required TResult Function(SendMessageLoading value) sendMessageLoading,
     required TResult Function(SendMessageSuccess value) sendMessageSuccess,
     required TResult Function(SendMessageError value) sendMessageError,
@@ -1048,6 +1677,9 @@ class _$GetMessagesError implements GetMessagesError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,
@@ -1062,6 +1694,9 @@ class _$GetMessagesError implements GetMessagesError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChatInitial value)? initial,
+    TResult Function(GetChatsLoading value)? getChatsLoading,
+    TResult Function(GetChatsSuccess value)? getChatsSuccess,
+    TResult Function(GetChatsError value)? getChatsError,
     TResult Function(SendMessageLoading value)? sendMessageLoading,
     TResult Function(SendMessageSuccess value)? sendMessageSuccess,
     TResult Function(SendMessageError value)? sendMessageError,

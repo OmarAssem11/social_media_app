@@ -21,7 +21,7 @@ class MenuItems extends StatelessWidget {
         ListTile(
           leading: const Icon(Icons.chat_outlined),
           title: Text(S.current.chats),
-          onTap: () {},
+          onTap: () => Navigator.of(context).pushNamed(AppRoutes.chats),
         ),
         ListTile(
           leading: const Icon(Icons.settings_outlined),

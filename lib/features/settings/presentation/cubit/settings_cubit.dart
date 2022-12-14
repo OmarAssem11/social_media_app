@@ -8,7 +8,7 @@ import 'package:social_media_app/features/settings/presentation/cubit/settings_s
 
 @singleton
 class SettingsCubit extends Cubit<SettingsState> {
-  SettingsCubit() : super(Initial());
+  SettingsCubit() : super(SettingsInitial());
 
   bool isDark = false;
   Locale locale = KeyConstants.englishLocale;
@@ -25,13 +25,13 @@ class SettingsCubit extends Cubit<SettingsState> {
         isDark = false;
       }
     });
-    emit(const SettingsState.changeState());
+    emit(const ChangeState());
   }
 
   Future<void> switchTheme() async {
     isDark = !isDark;
     await getIt<CacheHelper>().put(KeyConstants.theme, isDark);
-    emit(SettingsState.reloadingTheme(isDark: isDark));
+    emit(ReloadingTheme(isDark: isDark));
   }
 
   Future<void> getCurrentLocale() async {
@@ -48,12 +48,12 @@ class SettingsCubit extends Cubit<SettingsState> {
         locale = KeyConstants.englishLocale;
       }
     });
-    emit(const SettingsState.changeState());
+    emit(const ChangeState());
   }
 
   Future<void> changeLocale(Locale lc) async {
     locale = lc;
     await getIt<CacheHelper>().put(KeyConstants.locale, locale.toString());
-    emit(SettingsState.reloadingLocale(locale));
+    emit(ReloadingLocale(locale));
   }
 }

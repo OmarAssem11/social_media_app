@@ -68,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "somethingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong!"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
+        "typeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Type your message here..."),
         "w": MessageLookupByLibrary.simpleMessage("w"),
         "whatIsOnYourMind":
             MessageLookupByLibrary.simpleMessage("What\'s on your mind?"),

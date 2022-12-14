@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 import 'package:social_media_app/core/presentation/widgets/error_indicator.dart';
 import 'package:social_media_app/core/presentation/widgets/loading_indicator.dart';
 import 'package:social_media_app/features/chat/domain/entities/chat/chat.dart';
@@ -7,6 +8,7 @@ import 'package:social_media_app/features/chat/domain/entities/message/message.d
 import 'package:social_media_app/features/chat/presentation/cubit/chat_cubit.dart';
 import 'package:social_media_app/features/chat/presentation/cubit/chat_state.dart';
 import 'package:social_media_app/features/chat/presentation/widgets/chat_message.dart';
+import 'package:social_media_app/generated/l10n.dart';
 
 class ChatDetailsScreen extends StatefulWidget {
   const ChatDetailsScreen();
@@ -36,10 +38,10 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
         title: Row(
           children: [
             CircleAvatar(
-              radius: 20,
+              radius: Sizes.s20,
               backgroundImage: NetworkImage(chat.imageUrl),
             ),
-            const SizedBox(width: 15),
+            const SizedBox(width: Sizes.s16),
             Text(chat.name),
           ],
         ),
@@ -50,14 +52,15 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
             getMessagesLoading: () => const LoadingIndicator(),
             getMessagesError: () => const ErrorIndicator(),
             getMessagesSuccess: (messages) => Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(Insets.l),
               child: Column(
                 children: [
                   Expanded(
                     child: ListView.separated(
                       physics: const BouncingScrollPhysics(),
                       itemBuilder: (_, index) => ChatMessage(messages[index]),
-                      separatorBuilder: (_, __) => const SizedBox(height: 15),
+                      separatorBuilder: (_, __) =>
+                          const SizedBox(height: Sizes.s16),
                       itemCount: messages.length,
                     ),
                   ),
@@ -67,17 +70,17 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                       border: Border.all(
                         color: Colors.grey.withOpacity(0.3),
                       ),
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(Sizes.s16),
                     ),
                     child: Row(
                       children: [
-                        const SizedBox(width: 10),
+                        const SizedBox(width: Sizes.s12),
                         Expanded(
                           child: TextFormField(
                             controller: messageController,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Type your message here ...',
+                              hintText: S.current.typeYourMessageHere,
                             ),
                           ),
                         ),
@@ -98,7 +101,7 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                             minWidth: 1,
                             child: const Icon(
                               Icons.send,
-                              size: 16,
+                              size: Sizes.s16,
                               color: Colors.white,
                             ),
                           ),
