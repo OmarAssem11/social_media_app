@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
@@ -10,7 +12,6 @@ import 'package:social_media_app/features/chat/data/models/message_model/message
 class ChatFirebaseService {
   final _usersCollection =
       FirebaseFirestore.instance.collection(FirebasePath.users);
-
   final _userId = FirebaseAuth.instance.currentUser!.uid;
 
   Future<List<ChatModel>> getChats() async {
@@ -26,34 +27,36 @@ class ChatFirebaseService {
 
   Future<void> sendMessage(MessageModel messageModel) async {
     _usersCollection
-        .doc(messageModel.senderId)
+        .doc(_userId)
         .collection(FirebasePath.chats)
         .doc(messageModel.receiverId)
         .collection(FirebasePath.messages)
-        .add(messageModel.toJson());
+        .add(messageModel.toJson()..[KeyConstants.senderId] = _userId);
     _usersCollection
         .doc(messageModel.receiverId)
         .collection(FirebasePath.chats)
-        .doc(messageModel.senderId)
+        .doc(_userId)
         .collection(FirebasePath.messages)
-        .add(messageModel.toJson());
+        .add(messageModel.toJson()..[KeyConstants.senderId] = _userId);
   }
 
-  Future<List<MessageModel>> getMessages({required String receiverId}) async {
-    List<MessageModel> messages = [];
-    _usersCollection
+  Future<Stream<List<MessageModel>>> getMessages({
+    required String receiverId,
+  }) async {
+    return _usersCollection
         .doc(_userId)
         .collection(FirebasePath.chats)
         .doc(receiverId)
         .collection(FirebasePath.messages)
         .orderBy(KeyConstants.dateTime)
         .snapshots()
-        .listen((event) {
-      messages = [];
-      event.docs.map((queryDocSnapshot) {
-        messages.add(MessageModel.fromJson(queryDocSnapshot.data()));
-      }).toList();
-    });
-    return messages;
+        .map(
+          (querySnapshot) => querySnapshot.docs
+              .map(
+                (queryDocSnapshot) =>
+                    MessageModel.fromJson(queryDocSnapshot.data()),
+              )
+              .toList(),
+        );
   }
 }

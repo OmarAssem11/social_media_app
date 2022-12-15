@@ -49,11 +49,13 @@ class ChatCubit extends Cubit<ChatState> {
     emit(const GetMessagesLoading());
     final result =
         await _getMessagesUseCase(GetMessagesParams(receiverId: receiverId));
-    emit(
-      result.fold(
-        (failure) => const GetMessagesError(),
-        (messages) => GetMessagesSuccess(messages),
-      ),
+    result.fold(
+      (failure) => emit(const GetMessagesError()),
+      (messagesStream) {
+        messagesStream.listen((messages) {
+          emit(GetMessagesSuccess(messages));
+        });
+      },
     );
   }
 }

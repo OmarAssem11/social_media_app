@@ -3,8 +3,8 @@ import 'package:social_media_app/features/chat/domain/entities/message/message.d
 
 extension MessageMapper on Message {
   MessageModel get toModel => MessageModel(
-        senderId: '',
-        receiverId: '',
+        senderId: senderId,
+        receiverId: receiverId,
         text: text,
         dateTime: dateTime,
       );

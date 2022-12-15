@@ -30,7 +30,7 @@ class ChatRemoteDataSourceImpl implements ChatRemoteDataSource {
   }
 
   @override
-  Future<List<MessageModel>> getMessages(String receiverId) {
+  Future<Stream<List<MessageModel>>> getMessages(String receiverId) {
     try {
       return _chatFirebaseService.getMessages(receiverId: receiverId);
     } catch (exception) {

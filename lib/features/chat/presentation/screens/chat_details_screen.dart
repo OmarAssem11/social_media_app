@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media_app/core/presentation/resources/values_manager.dart';
 import 'package:social_media_app/core/presentation/widgets/error_indicator.dart';
 import 'package:social_media_app/core/presentation/widgets/loading_indicator.dart';
+import 'package:social_media_app/di/injector.dart';
+import 'package:social_media_app/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:social_media_app/features/chat/domain/entities/chat/chat.dart';
 import 'package:social_media_app/features/chat/domain/entities/message/message.dart';
 import 'package:social_media_app/features/chat/presentation/cubit/chat_cubit.dart';
@@ -58,7 +60,10 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                   Expanded(
                     child: ListView.separated(
                       physics: const BouncingScrollPhysics(),
-                      itemBuilder: (_, index) => ChatMessage(messages[index]),
+                      itemBuilder: (_, index) => BlocProvider(
+                        create: (_) => getIt<AuthCubit>(),
+                        child: ChatMessage(messages[index]),
+                      ),
                       separatorBuilder: (_, __) =>
                           const SizedBox(height: Sizes.s16),
                       itemCount: messages.length,

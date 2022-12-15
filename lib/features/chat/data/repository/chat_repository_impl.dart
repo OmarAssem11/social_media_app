@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:social_media_app/core/data/exceptions/app_exception.dart';
@@ -40,13 +42,17 @@ class ChatRepositoryImpl implements ChatRepository {
   }
 
   @override
-  Future<Either<Failure, List<Message>>> getMessages(String receiverId) async {
+  Future<Either<Failure, Stream<List<Message>>>> getMessages(
+    String receiverId,
+  ) async {
     try {
-      final messagesModels =
+      final messagesModelsStream =
           await _chatRemoteDataSource.getMessages(receiverId);
-      final messages =
-          messagesModels.map((messageModel) => messageModel.fromModel).toList();
-      return right(messages);
+      final messagesStream = messagesModelsStream.map(
+        (messagesModels) =>
+            messagesModels.map((msgModel) => msgModel.fromModel).toList(),
+      );
+      return right(messagesStream);
     } on AppException catch (appException) {
       return left(returnFailure(appException));
     }

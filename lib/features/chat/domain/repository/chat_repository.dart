@@ -8,5 +8,5 @@ abstract class ChatRepository {
 
   Future<Either<Failure, Unit>> sendMessage(Message message);
 
-  Future<Either<Failure, List<Message>>> getMessages(String receiverId);
+  Future<Either<Failure, Stream<List<Message>>>> getMessages(String receiverId);
 }

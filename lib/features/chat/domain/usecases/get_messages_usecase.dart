@@ -7,13 +7,14 @@ import 'package:social_media_app/features/chat/domain/entities/message/message.d
 import 'package:social_media_app/features/chat/domain/repository/chat_repository.dart';
 
 @lazySingleton
-class GetMessagesUseCase implements UseCase<List<Message>, GetMessagesParams> {
+class GetMessagesUseCase
+    implements UseCase<Stream<List<Message>>, GetMessagesParams> {
   final ChatRepository _chatRepository;
 
   const GetMessagesUseCase(this._chatRepository);
 
   @override
-  Future<Either<Failure, List<Message>>> call(
+  Future<Either<Failure, Stream<List<Message>>>> call(
     GetMessagesParams getMessagesParams,
   ) =>
       _chatRepository.getMessages(getMessagesParams.receiverId);

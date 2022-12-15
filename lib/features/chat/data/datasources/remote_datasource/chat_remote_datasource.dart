@@ -6,5 +6,5 @@ abstract class ChatRemoteDataSource {
 
   Future<void> sendMessage(MessageModel messageModel);
 
-  Future<List<MessageModel>> getMessages(String receiverId);
+  Future<Stream<List<MessageModel>>> getMessages(String receiverId);
 }
